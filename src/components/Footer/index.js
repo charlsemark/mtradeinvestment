@@ -13,7 +13,7 @@ export default function Footer() {
                             <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-800">MTRADEINVESTMENT</span>
                         </a>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-[#333] uppercase">OUR CONTACTS</h2>
                             <ul className="text-gray-500 font-medium">
@@ -21,10 +21,10 @@ export default function Footer() {
                                     <a href="/" className="hover:underline text-gray-500"> 506 Howard Street, Suite 4200, USA</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+15205211397" className="hover:underline text-gray-500"> +15205211397</a>
+                                    <a href="tel:+15205211397" className="hover:underline text-gray-500">+15013094404</a>
                                 </li>
                                 <li>
-                                    <a href="mailto:support@mtradeinvestment.com" className="hover:underline text-gray-500"> support@xxx.online</a>
+                                    <a href="mailto:support@mtradeinvestment.com" className="hover:underline text-gray-500"> support@mtradeinvestment.com</a>
                                 </li>
                                 <li>
                                     <a href="/" className="hover:underline text-gray-500"> Opening Hours: <span className="font-semibold">24/7 Available</span></a>

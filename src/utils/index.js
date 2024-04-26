@@ -339,16 +339,14 @@ export const dashboardNavLinks = [
 ];
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDkIxD29L9ANNijQcUY19VRCWqIlk0Qouw',
-  authDomain: 'nextjs-indexcopier.firebaseapp.com',
-  projectId: 'nextjs-indexcopier',
-  storageBucket: 'nextjs-indexcopier.appspot.com',
-  messagingSenderId: '1096908732110',
-  appId: '1:1096908732110:web:83b1596753947ebc43c29f',
+  apiKey: "AIzaSyBMTXJwxRJyw_FGdk_t1H97cBNmbsdRJUw",
+  authDomain: "binary-675cb.firebaseapp.com",
+  databaseURL: "https://binary-675cb-default-rtdb.firebaseio.com",
+  projectId: "binary-675cb",
+  storageBucket: "binary-675cb.appspot.com",
+  messagingSenderId: "1069173000484",
+  appId: "1:1069173000484:web:2304629b7b4ae848108bb1"
 };
+export const firebaseStorageURL = 'gs://binary-675cb.appspot.com';
 
-export const firebaseStorageURL = 'gs://nextjs-indexcopier.appspot.com';
 
-// export const defaultProfilePic = () => {
-//   return <
-// }
