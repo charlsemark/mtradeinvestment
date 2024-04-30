@@ -29,7 +29,7 @@ export default function Plans() {
     const allPlans = plans?.plans;
     console.log(allPlans)
     return (
-        <div className="w-full pt-16 mx-0 mb-0 relative text-[#333]">
+        <div className="w-full pt-24 mx-0 mb-0 relative text-[#333]">
             <div className="w-full flex items-center flex-col justify-center mt-10 mx-0 mb-0 space-y-6">
                 <div className="flex gap-8 flex-col md:grid md: grid-cols-2 md:mx-auto items-center justify-center">
                     {!allPlans ? (

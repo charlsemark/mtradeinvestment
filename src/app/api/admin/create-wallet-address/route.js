@@ -9,7 +9,7 @@ import { NextResponse } from 'next/server';
 const createNewWallet = Joi.object({
   walletName: Joi.string().required(),
   walletAddress: Joi.string(),
-  imageUrl: Joi.string().required(),
+  imageUrl: Joi.string(),
 });
 
 export const dynamic = 'force-dynamic';

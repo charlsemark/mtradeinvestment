@@ -7,7 +7,7 @@ const createCopier = Joi.object({
     name: Joi.string().required(),
     username: Joi.string().required(),
     bonus: Joi.number().required(),
-    imageUrl: Joi.string().required(),
+    imageUrl: Joi.string(),
   });
   
 export const dynamic = 'force-dynamic';

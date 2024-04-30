@@ -36,7 +36,7 @@ export default function Admin() {
         <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/users">
           All Users
         </a>
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/plans">
+        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/create-plans">
           Create Plans
         </a>
         <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/transactions">

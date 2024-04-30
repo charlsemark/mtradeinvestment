@@ -45,7 +45,6 @@ const initialFormData = {
     minPrice: '',
     maxPrice: '',
     roi: '',
-    imageUrl: '',
 }
 
 export default function AdminPlans() {
@@ -87,7 +86,7 @@ export default function AdminPlans() {
     }
 
     return (
-        <div className="w-full pt-16 text=[#333] mx-0 mb-0 relative">
+        <div className="w-screen mx-auto p-4 sm:p-6 lg:p-8 text-[#333] pt-28">
             <p className="text-lg ml-8 mb-4">Admin Dashboard - Investment Plans Page</p>
             <div className="flex flex-col items-start justify-start p-6 md:p-10 bg-white shadow-2xl rounded-xl relative">
                 <div className="w-full mt-6 mx-0 mb-0 space-y-6">

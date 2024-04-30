@@ -10,7 +10,7 @@ const createNewPlan = Joi.object({
   maxPrice: Joi.number().required(),
   roi: Joi.number().required(),
   period: Joi.number().required(),
-  imageUrl: Joi.string().required(),
+  imageUrl: Joi.string(),
 });
 
 export const dynamic = 'force-dynamic';

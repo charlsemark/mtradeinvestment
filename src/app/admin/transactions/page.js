@@ -115,7 +115,7 @@ const Transactions = () => {
     }
 
     return (
-        <div className="w-screen mx-auto p-4 sm:p-6 lg:p-8 text-[#333]">
+        <div className="w-screen mx-auto p-4 sm:p-6 lg:p-8 text-[#333] pt-24">
             <h2 className="text-2xl font-semibold mb-4">All Transactions</h2>
             <div className="overflow-x-auto no-scrollbar">
                 <table className="w-full border border-gray-800">
