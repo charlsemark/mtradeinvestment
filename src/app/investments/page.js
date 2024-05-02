@@ -99,10 +99,10 @@ export default function Investments() {
                                         <p>Max. Investment: <b>${plan.maxPrice}</b></p>
                                     </div>
                                     <div className="py-3">
-                                        <p>ROI: <b>Daily</b></p>
+                                    <p>Profit Period: <b>{plan.roiPeriod}</b></p>
                                     </div>
                                     <div className="py-3">
-                                        <p>Daily Profit: <b>{plan.roi}%</b></p>
+                                        <p>Profit: <b>{plan.roi}%</b></p>
                                     </div>
                                     <div className="py-3">
                                         <p>Duration: <b>{plan.period} Months</b></p>

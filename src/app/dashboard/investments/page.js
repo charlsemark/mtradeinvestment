@@ -40,7 +40,7 @@ export default function MyInvestments() {
                     </div>
                 )}
                 {/* Main Component */}
-                <div className="relative right-0 flex flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 w-full md:flex-1 left-0 md:left-[220px] overflow-x-auto overflow-scroll px-2 h-screen">
+                <div className="relative right-0 flex flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 w-full md:flex-1 left-0 md:left-[220px] overflow-x-auto overflow-scroll px-2 h-screen ">
                     <MyInvestmentsComp />
                 </div>
             </div>

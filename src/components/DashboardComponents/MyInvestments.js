@@ -82,7 +82,7 @@ export default function MyInvestmentsComp() {
                             <div key={idx} className="flex items-center justify-between">
                                 <div className="flex items-center gap-2">
                                     <div className="flex flex-col items-start gap-2">
-                                        <p className="text-base tracking-wide font-semibold">Basic Plan</p>
+                                        <p className="text-base tracking-wide font-semibold">{plan?.planName}</p>
                                         <div className="flex flex-col gap-1">
                                             <p className="text-xs"><span className="font-semibold">Period:</span> {calculateRemainingDays({ elapseTime: plan?.elapseTime, investmentId: plan?._id, status: plan?.status })} Days</p>
                                             <div className="flex items-center gap-2">
