@@ -44,6 +44,7 @@ const initialFormData = {
     planName: '',
     minPrice: '',
     maxPrice: '',
+    roiPeriod: '',
     roi: '',
 }
 
