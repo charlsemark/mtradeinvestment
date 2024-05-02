@@ -14,7 +14,7 @@ const Terms = () => {
                                 <div className="text-white text-center flex flex-col max-w-3xl gap-4 items-center">
                                     <h3 className="text-4xl font-bold">TERMS AND CONDITIONS</h3>
                                     <p className='text-lg font-medium uppercase'>
-                                        Delight ASSET MARKET
+                                        MUTUAL TRADE INVESTMENT
                                     </p>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@ const Terms = () => {
                             <h3 className="text-[#012c6d] text-2xl md:text-3xl font-bold max-w-2xl">
                                 Terms and Conditions
                             </h3>
-                            <p className='text-sm text-[#777] font-light'>This Agreement is entered into by and these Terms & Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between Delight Asset Market, with Company No. C092215, and registered at: Lead Asset Market is a product of Investment Solutions Limited incorporated in United States and Canada (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://Delightassetmarket.com (hereinafter referred as the “Website”).</p>
+                            <p className='text-sm text-[#777] font-light'>This Agreement is entered into by and these Terms & Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between Mutual Trade Investment, with Company No. C092215, and registered at: Lead Asset Market is a product of Investment Solutions Limited incorporated in United States and Canada (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://Delightassetmarket.com (hereinafter referred as the “Website”).</p>
                             <p className='text-sm text-[#777] font-light'>The Client confirms that he/she has read, understood and accepted all information, conditions and terms set out on Website which are open to be reviewed and can be examined by the public and which include important legal Information.</p>
                             <p className='text-sm text-[#777] font-light'>By accepting this Agreement, the Client agrees and irrevocably accepts the terms and conditions contained in this Agreement, its annexes and/or appendices as well as other documentation/information published on the Website, including without limitation to the Privacy Policy, Payment Policy, Withdrawal & Refund Policy, Code of Conduct, Order Execution Policy and Anti-Money Laundering Policy. The Client accepts this Agreement by registering an Account on the Website and depositing funds. By accepting the Agreement, and subject to the Company&apos;s final approval, the Client enters into a legal and binding agreement with the Company.</p>
                             <p className='text-sm text-[#777] font-light'>We&apos;re a truly global asset manager, with offices in over 40 locations and investment centres in more than 20 locations.

@@ -58,9 +58,9 @@ export default function Footer() {
                 </div>
                 <hr className="my-6 border-gray-900 sm:mx-auto lg:my-8" />
                 <div>
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                         <img src="/delight-logo.png" alt="logo" className="w-full h-auto" />
-                    </div>
+                    </div> */}
                     <p className="text-sm">
                         Mtrade Investment is one of the leading platforms in the United States offering binary options, Forex and spreads. Regulated by the CFTC and based in Manchester. It is also regulated by the IFSC of Belize, as well as the Cyprus Securities and Exchange Commission
                     </p>

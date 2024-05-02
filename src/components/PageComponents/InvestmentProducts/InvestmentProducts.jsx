@@ -406,7 +406,7 @@ const InvestmentProducts = () => {
                 <p>
                   We&apos;re proud to be an asset management company whose
                   culture is driven by strong values and a long-term vision. At
-                  Delight Asset Market Investments, our vision, mission and core
+                  Mutual Trade Investment Investments, our vision, mission and core
                   values serve as the catalyst in our relations with our
                   clients, employees, shareholders and in the communities in
                   which we live and work. They are our guiding compass in our
