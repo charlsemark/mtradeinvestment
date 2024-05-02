@@ -230,7 +230,7 @@ const InvestmentProducts = () => {
                   </div>
                   <div className="py-3">
                     <p>
-                      Profit Period: <b>${plan.roiPeriod}</b>
+                      Profit Period: <b>{plan.roiPeriod}</b>
                     </p>
                   </div>
                   <div className="py-3">
