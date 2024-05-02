@@ -8,6 +8,7 @@ const createNewPlan = Joi.object({
   planName: Joi.string().required(),
   minPrice: Joi.number().required(),
   maxPrice: Joi.number().required(),
+  roiPeriod: Joi.string().required(),
   roi: Joi.number().required(),
   period: Joi.number().required(),
   imageUrl: Joi.string(),

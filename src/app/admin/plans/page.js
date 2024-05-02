@@ -53,7 +53,7 @@ export default function Plans() {
                                     <p>ROI: <b>Daily</b></p>
                                 </div>
                                 <div className="py-3">
-                                    <p>Daily Profit: <b>{plan.roi}%</b></p>
+                                    <p>Profit: <b>{plan.roi}%</b></p>
                                 </div>
                                 <div className="py-3">
                                     <p>Duration: <b>{plan.period} Months</b></p>

@@ -193,6 +193,27 @@ export const adminCreateInvestmentControls = [
     componentType: 'input',
   },
   {
+    id: 'roiPeriod',
+    type: '',
+    placeholder: 'Monthly, Weekly, Daily...',
+    label: 'Profit Period',
+    componentType: 'select',
+    options: [
+      {
+        id: 'Montly',
+        label: 'Monthly',
+      },
+      {
+        id: 'Weekly',
+        label: 'Weekly',
+      },
+      {
+        id: 'Daily',
+        label: 'Daily',
+      },
+    ],
+  },
+  {
     id: 'roi',
     type: 'number',
     placeholder: 'Percentage(%) increase',

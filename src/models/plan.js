@@ -1,3 +1,4 @@
+
 import mongoose from 'mongoose';
 
 // const { Schema } = mongoose;
@@ -14,6 +15,10 @@ const PlanSchema = new mongoose.Schema(
     },
     maxPrice: {
       type: Number,
+      required: true,
+    },
+    roiPeriod: {
+      type: String,
       required: true,
     },
     roi: {
