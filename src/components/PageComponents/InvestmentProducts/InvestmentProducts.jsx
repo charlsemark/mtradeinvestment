@@ -19,6 +19,7 @@ const allPlans = [
     planName: "Basic Plan - Beginner Group",
     maxPrice: 100000,
     minPrice: 10000,
+    roiPeriod: "Weekly",
     roi: 45,
     period: "6",
   },
@@ -26,6 +27,7 @@ const allPlans = [
     planName: "Business Plan - Professional Group",
     maxPrice: 350000,
     minPrice: 60000,
+    roiPeriod: "Weekly",
     roi: 60,
     period: "6",
   },
@@ -33,6 +35,7 @@ const allPlans = [
     planName: "Joint Plan - BOT Plan",
     maxPrice: 1000000,
     minPrice: 100000,
+    roiPeriod: "Weekly",
     roi: 60,
     period: "12",
   },
@@ -40,6 +43,7 @@ const allPlans = [
     planName: "Retirement Plan",
     maxPrice: 1000000,
     minPrice: 250000,
+    roiPeriod: "Weekly",
     roi: 75,
     period: "12",
   },
@@ -47,6 +51,7 @@ const allPlans = [
     planName: "Savings Plan",
     maxPrice: 500000,
     minPrice: 40000,
+    roiPeriod: "Weekly",
     roi: 60,
     period: "6",
   },
@@ -54,6 +59,7 @@ const allPlans = [
     planName: "Premium Plan",
     maxPrice: 1000000,
     minPrice: 75000,
+    roiPeriod: "Daily",
     roi: 5,
     period: "6",
   },
@@ -224,12 +230,12 @@ const InvestmentProducts = () => {
                   </div>
                   <div className="py-3">
                     <p>
-                      ROI: <b>Daily</b>
+                      Profit Period: <b>${plan.roiPeriod}</b>
                     </p>
                   </div>
                   <div className="py-3">
                     <p>
-                      Daily Profit: <b>{plan.roi}%</b>
+                      Profit: <b>{plan.roi}%</b>
                     </p>
                   </div>
                   <div className="py-3">

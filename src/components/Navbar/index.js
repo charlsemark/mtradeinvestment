@@ -10,6 +10,7 @@ import { usePathname, useRouter } from "next/navigation";
 import UserDetailsContext from "@/context/useUser";
 import UserAlerts from "@/utils/usersAlert";
 import { MenuIcon } from "lucide-react";
+import {logo} from "../../../public/assests/loh.png";
 
 // const isAdminView = false;
 // const isAuthUser = true;
