@@ -23,7 +23,7 @@ export default function ProfileDetails({ userProfit, userImage, userName, userEm
 
     return (
         <>
-            <div className="bg-gray-400 text-black font-medium shadow-xl p-3 space-y-10 rounded-lg">
+            <div className="max-w-[800px] w-full text-black font-medium shadow-xl pt-0 p-5 space-y-10 rounded-lg">
                 {/* Content for Profile Details tab */}
                 <div className="border-t-2 border-cyan-600 rounded-t-lg py-5 shadow-lg">
                     <div className="flex flex-col items-center">

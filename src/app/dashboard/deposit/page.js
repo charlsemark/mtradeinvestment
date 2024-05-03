@@ -161,7 +161,7 @@ export default function Deposit() {
                 </div>
             )}
             {/* Main Component */}
-            <div className="relative right-0 flex flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 w-full md:flex-1 left-0 md:left-[220px] overflow-x-auto overflow-scroll px-4">
+            <div className="mx-auto flex items-center justify-center flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 max-w-[800px] md:flex-1 left-0 md:left-[220px]  px-4 mt-28">
                 <div className="flex flex-col w-full mt-5 mx-0 mb-0 border-[0.5px] rounded-sm border-gray-200">
                     <div className="border-b-[1px] border-gray-600">
                         <div className="flex items-center px-4 py-6 justify-between">

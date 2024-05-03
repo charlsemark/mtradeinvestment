@@ -67,7 +67,7 @@ export default function Settings() {
         <>
             <div className="text-black">
                 <h2 className="mb-2">Change Password</h2>
-                <div className="border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-3 px-3 items-start py-5 shadow-lg">
+                <div className="w-[600px] mb-4 border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-3 px-3 items-start py-5 shadow-lg">
                     <div className="flex flex-col gap-2 w-full">
                         <label>New Password<b></b></label>
                         <input className="text-black border-[0.5px] border-gray-400 px-3 py-4 rounded-lg w-full" type="text" placeholder="Enter new password" onChange={(e) => handleNewPassword(e.target.value)} />

@@ -25,14 +25,9 @@ export default function NavigationBar({ username }) {
         window.location.reload()
     }
     return (
-        <div className="flex flex-col border border-l-0 border-t-0 border-r-1 h-screen pt-3 px-4 relative">
-            <div className="mt-2 w-full bg-gray-200 py-4 px-2 rounded-lg">
-                <p>Welcome, <b>{username}</b></p>
-            </div>
-            {/* <div className="cursor-pointer w-7 h-7 flex items-center justify-center bg-[#fd961a] text-white rounded-full absolute -right-4 top-20">
-                <ChevronRight />
-            </div> */}
-            <div className="mt-14 flex flex-col space-y-5">
+        <div className="flex flex-col border border-l-0 border-t-0 border-r-1 h-screen pt-28 px-4 relative bg-white">
+           
+            <div className="mt-8 flex flex-col space-y-5">
                 {
                     user?.role == 'client' ?
                         dashboardNavLinks.map((navItem, index) => (

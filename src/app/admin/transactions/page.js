@@ -22,7 +22,7 @@ const Transactions = () => {
     async function fetchUsersData() {
         try {
             const usersData = await fetchUsers();
-            console.log(usersData);
+            // console.log(usersData);
             setUsers(usersData);
         } catch (error) {
             console.error('Error fetching plans:', error);
@@ -33,16 +33,17 @@ const Transactions = () => {
 
     const allUsers = users?.users;
     const lengthOfUser = users?.users?.length;
-    console.log(allUsers)
+    // console.log(allUsers)
     // console.log(allPlans)
 
     const allTransactions = allUsers?.flatMap(user => user.transactions || []);
+    // const mainTransc = allTransactions?.flatMap(transactions => transactions.transc || []);
 
-    console.log(allTransactions);
+    // console.log(allTransactions);
 
     function handleApprove(transactionsId) {
         try {
-            console.log("Hey Guy...");
+            // console.log(transactionsId);
             const response = updateUser(
                 {
                     transactionsId,
@@ -53,7 +54,7 @@ const Transactions = () => {
                     },
                 },
             );
-            console.log(response);
+            // console.log(response);
             if (response?.success) {
                 toast.success("Transaction Approved!", {
                     position: toast.POSITION.TOP_RIGHT,
@@ -75,47 +76,47 @@ const Transactions = () => {
         }
     }
 
-    function handleDecline(transactionsId) {
-        try {
-            console.log("Hey Guy...");
-            const response = updateUser(
-                {
-                    transactionsId,
-                    transactions: {
-                        status: {
-                            isRejected: true
-                        },
-                    },
-                },
-            );
-            console.log(response);
-            if (response?.success) {
-                toast.success("Transaction Declined!", {
-                    position: toast.POSITION.TOP_RIGHT,
-                });
-                // setComponentLevelLoader({ loading: false, id: '' })
-            } else {
-                if (response?.error) {
-                    toast.error("Error updating transaction", {
-                        position: toast.POSITION.TOP_RIGHT,
-                    });
-                }
-                // setComponentLevelLoader({ loading: false, id: '' })
-            }
-        } catch (error) {
-            console.log("Error updating transaction:", error);
-            toast.error("Something went wrong. Please try again later.", {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-        }
-    }
+    // async function handleDecline(transactionsId) {
+    //     try {
+    //         console.log("Hey Guy...");
+    //         const response = await updateUser(
+    //             {
+    //                 transactionsId,
+    //                 transactions: {
+    //                     status: {
+    //                         isRejected: true
+    //                     },
+    //                 },
+    //             },
+    //         );
+    //         console.log(response);
+    //         if (response?.success) {
+    //             toast.success("Transaction Declined!", {
+    //                 position: toast.POSITION.TOP_RIGHT,
+    //             });
+    //             // setComponentLevelLoader({ loading: false, id: '' })
+    //         } else {
+    //             if (response?.error) {
+    //                 toast.error("Error updating transaction", {
+    //                     position: toast.POSITION.TOP_RIGHT,
+    //                 });
+    //             }
+    //             // setComponentLevelLoader({ loading: false, id: '' })
+    //         }
+    //     } catch (error) {
+    //         console.log("Error updating transaction:", error);
+    //         toast.error("Something went wrong. Please try again later.", {
+    //             position: toast.POSITION.TOP_RIGHT,
+    //         });
+    //     }
+    // }
 
     function handleClose() {
         setSelectedUserId(null);
     }
 
     return (
-        <div className="w-screen mx-auto p-4 sm:p-6 lg:p-8 text-[#333] pt-24">
+        <div className="w-screen mx-auto p-4 sm:p-6 lg:p-8 text-[#333] mt-36">
             <h2 className="text-2xl font-semibold mb-4">All Transactions</h2>
             <div className="overflow-x-auto no-scrollbar">
                 <table className="w-full border border-gray-800">
@@ -140,7 +141,7 @@ const Transactions = () => {
                                     <tr key={user.id} className="border-t border-gray-600">
                                         <td className="p-3">
                                             <img src={user.receipt || "/profile.png"} alt={`User ${user.name}`} className="w-10 h-10 rounded-full object-cover" />
-                                        </td>
+                                        </td> 
                                         <td className="p-3">{user.transactionType}</td>
                                         <td className="p-3">{user.walletName}</td>
                                         <td className="p-3">${user.amount

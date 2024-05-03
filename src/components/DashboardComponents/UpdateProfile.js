@@ -165,7 +165,7 @@ export default function UpdateProfile({ user }) {
         <>
             <div>
                 <h2 className="mb-2">Update Account</h2>
-                <div className="border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-3 px-3 items-start py-5 shadow-lg">
+                <div className="w-[800px] mb-4 border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-3 px-3 items-start py-5 shadow-lg">
                     {/* Content for Profile Details tab */}
                     <div className="flex flex-col gap-2 w-full">
                         <label>Change profile picture<b></b></label>

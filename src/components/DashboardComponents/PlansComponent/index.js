@@ -47,7 +47,7 @@ export default function PlansComponent() {
             {selectedPlan && isModalOpen && (
                 <StartInvestment plan={selectedPlan} onClose={handleCloseModal} />
             )}
-            <div className="w-full mt-5 mx-0 mb-0 relative">
+            <div className="w-full mt-2 mx-auto mb-10 relative">
                 <div className="w-full flex items-center flex-col justify-center mt-10 mx-0 mb-0 space-y-6">
                     <div className="">
                         <h3 className="text-[#007bff] font-medium text-lg">OUR PLANS</h3>

@@ -49,7 +49,7 @@ export default function Profile() {
                     </div>
                 )}
                 {/* Main Component */}
-                <div className="relative right-0 flex flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 w-full md:flex-1 left-0 md:left-[220px] overflow-x-auto overflow-scroll px-4">
+                <div className="mx-auto flex items-center justify-center flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 max-w-[1200px] md:flex-1 left-0  px-4 mt-32">
                     {/* Tab Component */}
                     <div className="block md:hidden py-2 px-2">
                         <p>Dashboard / Profile</p>
