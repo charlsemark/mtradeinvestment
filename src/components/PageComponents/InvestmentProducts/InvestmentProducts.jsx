@@ -207,12 +207,11 @@ const InvestmentProducts = () => {
             </p>
           </div>
         </div>
-        <div className="">
           <div className="container w-full mx-4 md:mx-auto mb-8 overflow-hidden">
             <div className="px-4 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-0 mb-0 space-y-6">
-              {allPlans.map((plan, index) => (
+              {allPlans?.map((plan) => (
                 <div
-                  key={plan.id}
+                  key={plan._id}
                   className={`flex-shrink-0 w-[280px] bg-[#01123c] rounded-xl border-[0.6px] border-gray-300 h-auto flex flex-col items-center text-white ml-2 mr-2`}
                 >
                   <div className="w-full py-6 bg-[#01123c] text-white text-center text-xl font-bold rounded-t-xl">
@@ -265,7 +264,6 @@ const InvestmentProducts = () => {
               </button>
             </div>
           </div>
-        </div>
         <div className="bg-[#1f263f] py-12 w-full">
           <div className="container mx-auto px-6">
             <div className="flex flex-col gap-5">
@@ -435,9 +433,9 @@ const InvestmentProducts = () => {
                 height="100%"
                 src="https://www.youtube.com/embed/GmOzih6I1zs"
                 title="What is Bitcoin Mining?"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </div>

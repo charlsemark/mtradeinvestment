@@ -1,12 +1,13 @@
-// next.config.js
-
 const nextConfig = {
-    images: {
-      domains: ['firebasestorage.googleapis.com'],
-      disableStaticImages: true,
-    },
-    fallback: true,
-  };
-  
-  module.exports = nextConfig;
-  
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+      },
+    ],
+    disableStaticImages: true,
+  },
+};
+
+module.exports = nextConfig;
