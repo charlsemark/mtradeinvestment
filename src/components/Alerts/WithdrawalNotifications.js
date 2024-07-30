@@ -17,7 +17,7 @@ export default function WithdrawalNotifications() {
         let index = 0;
         const interval = setInterval(() => {
             const { user, amount } = notifications[index];
-            toast.info(`${user} has withdrawn ${amount}`, {
+            toast.success(`${user} has withdrawn $${amount}`, {
                 position: "bottom-left",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -25,7 +25,6 @@ export default function WithdrawalNotifications() {
                 pauseOnHover: true,
                 draggable: true,
                 theme: "dark",
-                transition: Bounce,
                 progress: undefined,
             });
             index = (index + 1) % notifications.length; // Cycle through the list

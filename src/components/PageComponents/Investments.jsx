@@ -66,9 +66,9 @@ export default function AllPlans() {
                   <SpinLoading />
                 </div>
               ) : (
-                allPlans?.map((plan) => (
+                allPlans?.map((plan, idx) => (
                   <div
-                    key={plan.id}
+                    key={idx}
                     className="w-[320px] bg-white rounded-xl border-[0.6px] border-[#007bff] h-auto flex flex-col items-center relative text-black"
                   >
                     <div className="w-full py-4 bg-[#007bff] text-white text-center text-xl font-bold rounded-t-xl">

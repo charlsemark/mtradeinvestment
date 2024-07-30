@@ -209,9 +209,9 @@ const InvestmentProducts = () => {
         </div>
           <div className="container w-full mx-4 md:mx-auto mb-8 overflow-hidden">
             <div className="px-4 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-0 mb-0 space-y-6">
-              {allPlans?.map((plan) => (
+              {allPlans?.map((plan, idx) => (
                 <div
-                  key={plan._id}
+                  key={idx}
                   className={`flex-shrink-0 w-[280px] bg-[#01123c] rounded-xl border-[0.6px] border-gray-300 h-auto flex flex-col items-center text-white ml-2 mr-2`}
                 >
                   <div className="w-full py-6 bg-[#01123c] text-white text-center text-xl font-bold rounded-t-xl">
@@ -372,7 +372,7 @@ const InvestmentProducts = () => {
         <div className="container px-4 flex flex-col gap-4 items-center">
           <div className="flex flex-col md:flex-row md:justify-between items-center gap-4">
             <div className="relative h-[460px] w-auto overflow-hidden bg-transparent z-10">
-              {slideData.map((slide2, index2) => (
+              {slideData?.map((slide2, index2) => (
                 <div
                   key={slide2.id}
                   className={`w-full h-full transition-transform transform ${
