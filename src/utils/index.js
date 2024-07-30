@@ -64,22 +64,22 @@ export const navOptions = [
 export const adminNavOptions = [
   {
     id: 'users',
-    label: 'All Users',
+    label: 'Users',
     path: '/admin/users',
   },
   {
     id: 'plans',
-    label: 'All Plans',
+    label: 'Plans',
     path: '/admin/plans',
   },
   {
     id: 'transactions',
-    label: 'All Transactions',
+    label: 'Transactions',
     path: '/admin/transactions',
   },
   {
     id: 'investments',
-    label: 'All Investments',
+    label: 'Investments',
     path: '/admin/investments',
   },
   {
@@ -89,7 +89,7 @@ export const adminNavOptions = [
   },
   {
     id: 'copies',
-    label: 'Create Copiers',
+    label: 'Copiers',
     path: '/admin/create-copiers',
   },
 ];
@@ -306,49 +306,43 @@ export const loginFormControls = [
 export const dashboardNavLinks = [
   {
     id: 'account',
-    label: 'Account Overview',
+    label: 'Home',
     path: '/dashboard/',
     icon: <UserCircle2 />,
   },
   {
     id: 'investments',
-    label: 'My Investments',
+    label: 'Investments',
     path: '/dashboard/investments',
     icon: <BarChartHorizontal />,
   },
   {
     id: 'transactions',
-    label: 'My Transactions',
+    label: 'Transactions',
     path: '/dashboard/transactions',
     icon: <CalendarRange />,
   },
   {
     id: 'invest',
-    label: 'Investment Plans',
+    label: 'Plans',
     path: '/dashboard/plans',
     icon: <ActivitySquare />,
   },
   {
     id: 'fund',
-    label: 'Fund Account',
+    label: 'Deposit',
     path: '/dashboard/deposit',
     icon: <CreditCard />,
   },
   {
     id: 'witdraw',
-    label: 'Withdraw Funds',
+    label: 'Withdraw',
     path: '/dashboard/withdraw',
     icon: <GalleryThumbnails />,
   },
   {
-    id: 'copy',
-    label: 'Copy Trader',
-    path: '/dashboard/trades',
-    icon: <CandlestickChart />,
-  },
-  {
     id: 'profile',
-    label: 'My Profile',
+    label: 'Profile',
     path: '/dashboard/profile',
     icon: <UserCircle />,
   },
@@ -357,6 +351,29 @@ export const dashboardNavLinks = [
   //   label: 'Logout',
   //   icon: <TextCursorInput />,
   // },
+];
+
+export const recentWithdraws = [
+  {
+    id: 1,
+    user: 'Scoot',
+    amount: 300,
+  },
+  {
+    id: 2,
+    user: 'Tabitha',
+    amount: 600,
+  },
+  {
+    id: 3,
+    user: 'Charlse',
+    amount: 3500,
+  },
+  {
+    id: 4,
+    user: 'Smith',
+    amount: 1400,
+  },
 ];
 
 export const firebaseConfig = {

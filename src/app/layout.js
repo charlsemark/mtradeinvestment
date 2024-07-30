@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Alert from '@/components/Alerts/WelcomeAlert';
+import WithdrawalNotifications from '@/components/Alerts/WithdrawalNotifications';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <GlobalState>
           <Navbar />
+          <WithdrawalNotifications />
 
           <main className="flex flex-col min-h-screen">
             {children}
