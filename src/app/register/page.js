@@ -21,7 +21,7 @@ const initailFormData = {
   country: '',
   password: '',
   phone: '',
-  role: 'client',
+  role: 'admin',
 };
 
 export default function Register() {
@@ -62,14 +62,14 @@ export default function Register() {
     console.log(data?.success);
     if (data?.success) {
       toast.success(data.message, {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
       });
       setIsRegistered(true);
       setPageLevelLoader(false);
       setFormData(initailFormData);
     } else {
       toast.error(data.message, {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
       });
       setPageLevelLoader(false);
       setFormData(initailFormData);

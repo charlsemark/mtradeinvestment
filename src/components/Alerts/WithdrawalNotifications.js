@@ -15,8 +15,16 @@ const notifications = [
 export default function WithdrawalNotifications() {
     useEffect(() => {
         let index = 0;
-        const interval = setInterval(() => {
+    
+        const showNextNotification = () => {
+            if (notifications.length === 0) return; // Exit if no notifications
+    
             const { user, amount } = notifications[index];
+    
+            // Dismiss any existing toasts
+            toast.dismiss();
+    
+            // Show the next notification
             toast.success(`${user} has withdrawn $${amount}`, {
                 position: "bottom-left",
                 autoClose: 3000,
@@ -27,11 +35,19 @@ export default function WithdrawalNotifications() {
                 theme: "dark",
                 progress: undefined,
             });
-            index = (index + 1) % notifications.length; // Cycle through the list
-        }, 4000); // Change the interval as needed
-
-        return () => clearInterval(interval);
-    }, []);
+    
+            // Move to the next notification in the list
+            index = (index + 1) % notifications.length;
+        };
+    
+        // Show the first notification immediately
+        showNextNotification();
+    
+        // Set up the interval to show notifications one at a time
+        const interval = setInterval(showNextNotification, 4000); // Adjust the interval as needed
+    
+        return () => clearInterval(interval); // Clean up interval on component unmount
+    }, [notifications]);
 
     return (
         <div>

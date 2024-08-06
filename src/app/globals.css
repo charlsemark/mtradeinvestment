@@ -230,3 +230,8 @@ body {
   text-align: center;
   color: #fff;
 }
+
+#google_translate_element {
+  margin-top: 20px;
+  /* Add any other styles you need */
+}

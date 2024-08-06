@@ -1,5 +1,4 @@
 "use client"
-
 import Footer from "@/components/Footer";
 import InputComponent from "@/components/FormElements/InputComponent"
 import SelectComponent from "@/components/FormElements/SelectComponent"
@@ -45,7 +44,7 @@ export default function Login() {
         // console.log(data?.success);
         if (data?.success) {
             toast.success(data.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             // console.log(data.finalResult)
             setFormData(initailFormData);
@@ -64,7 +63,7 @@ export default function Login() {
             setComponentLevelLoader({ loading: false, id: '' })
         } else {
             toast.error(data.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             setIsAuthUser(false)
             setFormData(initailFormData);

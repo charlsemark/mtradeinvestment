@@ -6,22 +6,22 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, email, subject, message } = req.body;
 
-    // Create a nodemailer transporter using your email provider's SMTP settings
+    // Create a nodemailer transporter using Zoho Mail SMTP settings
     const transporter = nodemailer.createTransport({
-      host: 'your-smtp-host',
+      host: 'smtp.zoho.com',
       port: 587,
-      secure: false,
+      secure: TLS, // Use TLS
       auth: {
-        user: 'your-email@example.com',
-        pass: 'your-email-password',
+        user: 'support@mtradeinvestment.com',
+        pass: 'your-email-password', // Replace with your Zoho Mail password
       },
     });
 
     // Setup email data
     const mailOptions = {
-      from: 'your-email@example.com',
-      to: 'test@gmail.com',
-      subject: `New Contact Form Submission: ${subject}`,
+      from: 'support@mtrade.com',
+      to: email, // Send to the user
+      subject: subject,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };
 
