@@ -21,7 +21,7 @@ const initailFormData = {
   country: '',
   password: '',
   phone: '',
-  role: 'admin',
+  role: 'client',
 };
 
 export default function Register() {
