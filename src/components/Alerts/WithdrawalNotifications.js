@@ -32,7 +32,7 @@ export default function WithdrawalNotifications() {
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
-                theme: "dark",
+                theme: "light",
                 progress: undefined,
             });
     

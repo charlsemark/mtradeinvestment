@@ -18,6 +18,7 @@ import RecentTransactions from "@/components/PageComponents/RecentTransactions";
 import Carousel from "@/components/PageComponents/HeroCarousel/Carousell";
 import AboutLead from "@/components/PageComponents/AboutLead";
 import InvestmentProducts from "@/components/PageComponents/InvestmentProducts/InvestmentProducts";
+import LanguageTranslate from "@/components/LanguageTranslate";
 
 // import { fetchLoginUser } from "@/services/user";
 
@@ -28,7 +29,7 @@ export default function Home() {
     <>
     
     {/* { isAlertOpen && <Alert isOpen={isAlertOpen} setIsOpen={setIsAlertOpen} />} */}
-      <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#fff] text-black mt-[83px]">
+      <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#222] text-white">
         <Carousel />
         <AboutLead />
         <HeroSection />
@@ -39,6 +40,7 @@ export default function Home() {
         <Customers />
         {/* <RecentTransactions /> */}
         <ViewAllPlans />
+        <LanguageTranslate />
         <Footer />
       </div>
     </>

@@ -235,3 +235,20 @@ body {
   margin-top: 20px;
   /* Add any other styles you need */
 }
+
+.toast-container {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.toast-success {
+  /* Add any additional styling for success toasts here if needed */
+}
+
+.goog-te-gadget-simple {
+  width: 100%;
+  display: flex;
+}

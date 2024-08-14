@@ -57,7 +57,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <hr className="my-6 border-gray-900 sm:mx-auto lg:my-8" />
-                <div>
+                <div className="text-gray-900">
                     {/* <div className="mb-4">
                         <img src="/delight-logo.png" alt="logo" className="w-full h-auto" />
                     </div> */}
@@ -71,7 +71,8 @@ export default function Footer() {
                     </div> */}
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                <div className="sm:flex sm:items-center sm:justify-between">
+                <div className="sm:flex sm:items-center sm:justify-between text-gray-900
+                ">
                     <span className="text-sm text-gray-500 sm:text-center">© 2023 <a href="/" className="hover:underline">Mtradeinvestment™</a>. All Rights Reserved.
                     </span>
                     {/* <div className="flex my-10 sm:justify-center sm:mt-0">

@@ -19,7 +19,7 @@ const LanguageTranslate = () => {
         intervalId = setInterval(checkGoogleTranslate, 100);
     }, []);
   return (
-    <div ref={googleTranslateRef}></div>
+    <div ref={googleTranslateRef} className='bg-white fixed z-50 right-0 left-0 top-0'></div>
   )
 }
 
