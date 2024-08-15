@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       port: 587,
       secure: TLS, // Use TLS
       auth: {
-        user: 'support@mtradeinvestment.com',
+        user: 'support@spiketrader.online',
         pass: 'your-email-password', // Replace with your Zoho Mail password
       },
     });

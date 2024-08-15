@@ -318,7 +318,7 @@ const InvestmentProducts = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:justify-between">
             <div className="space-y-4">
               <h1 className="font-semibold text-xl leading-6 text-center">
-                ABOUT MTRADEINVESTMENT
+                ABOUT SPIKETRADER
               </h1>
               <p className="">
                 Mutual Trade Investment We are crypto trading investment organization.

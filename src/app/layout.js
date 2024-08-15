@@ -9,16 +9,16 @@ import LanguageTranslate from '@/components/LanguageTranslate';
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Mutual Trade Investment - Built for investors interested in high yields, stable returns and also high liquidity.',
+  title: 'Spiketraderfx - Built for investors interested in high yields, stable returns and also high liquidity.',
   description: 'Invest with confidence on worlds leading asset management and investment platform.',
+  icons: {
+    icon: '/favicon.ico', // Assuming the favicon is in the public directory
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/loh.png" sizes="any" />
-      </Head>
       <body>
 
         <LanguageTranslate />

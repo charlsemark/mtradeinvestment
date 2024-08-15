@@ -114,7 +114,7 @@ export default function Navbar() {
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
                         <img src="./loh.png" className="h-8 w-auto mr-1" alt=" Logo" />
-                        <span className="self-center text-base md:text-xl font-semibold whitespace-no-wrap text-white">Mtrade Investments</span>
+                        <span className="self-center text-base md:text-xl font-semibold whitespace-no-wrap text-white">Spiketraders</span>
                     </div>
 
                     <div className="flex items-center md:order- gap-2">
