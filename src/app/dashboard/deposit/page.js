@@ -15,6 +15,7 @@ import ComponentLevelLoader from "@/components/Loader/componentLevel";
 import { toast } from "react-toastify";
 import Notifications from "@/components/Notifications";
 import UserDetailsContext from "@/context/useUser";
+import { useRouter } from "next/navigation";
 
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app, firebaseStorageURL);
@@ -56,6 +57,7 @@ export default function Deposit() {
     const [selectedWallet, setSelectedWallet] = useState(null);
     const [formData, setFormData] = useState(initialFormData);
     const [shouldShowNavigationBar, setShouldShowNavigationBar] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         // Check if window is defined (to avoid SSR errors)
@@ -124,7 +126,7 @@ export default function Deposit() {
             // Display an error message or handle the lack of receipt
             console.error('Please upload a receipt before submitting.');
             toast.error('Please upload a receipt before submitting.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
@@ -134,13 +136,14 @@ export default function Deposit() {
             const result = await fundUserBalance(formData);
             if (result?.success) {
                 toast.success(result?.message, {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 setFormData(initialFormData);
                 setComponentLevelLoader({ loading: false, id: '' })
+                router.push('/dashboard')
             } else {
                 toast.error(result?.message, {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 // setFormData(initialFormData);
                 setComponentLevelLoader({ loading: false, id: '' })
@@ -166,7 +169,9 @@ export default function Deposit() {
                     <div className="border-b-[1px] border-gray-600">
                         <div className="flex items-center px-4 py-6 justify-between">
                             <p className="font-semibold text-lg">Add Money</p>
-                            <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">Deposit History</button>
+                            <a href="/dashboard/transactions">
+                                <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">Deposit History</button>
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-4 px-4 pt-8 pb-4">

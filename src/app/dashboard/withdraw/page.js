@@ -75,7 +75,7 @@ export default function Withdraw() {
             // Display an error message or handle the lack of receipt
             console.error('Please select a wallet.');
             toast.error('Please select a wallet.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
@@ -83,7 +83,7 @@ export default function Withdraw() {
             // Display an error message or handle the lack of receipt
             console.error('Please make sure address is selected.');
             toast.error('Please make sure address is selected.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
@@ -91,14 +91,14 @@ export default function Withdraw() {
             // Display an error message or handle the lack of receipt
             console.error('Amount not entered');
             toast.error('Amount not entered.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
         if (user?.balance <= formData.amount) {
             console.error('Insufficient balance.');
             toast.error('Insufficient balance.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
@@ -108,13 +108,13 @@ export default function Withdraw() {
             const result = await userWithdrawal(formData);
             if (result?.success) {
                 toast.success("Withdrawal request created", {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 setFormData(initialFormData);
                 setComponentLevelLoader({ loading: false, id: '' })
             } else {
                 toast.error("Something went wrong.", {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 setFormData(initialFormData);
                 setComponentLevelLoader({ loading: false, id: '' })
@@ -139,7 +139,9 @@ export default function Withdraw() {
                     <div className="border-b-[1px] border-gray-600">
                         <div className="flex items-center px-4 py-6 justify-between">
                             <p className="font-semibold text-lg">Withdrawal</p>
-                            <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">Withdrawal History</button>
+                            <a href="/dashboard/transactions">
+                                <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">Withdrawal History</button>
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-4 px-4 pt-8 pb-4">

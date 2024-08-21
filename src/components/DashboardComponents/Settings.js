@@ -47,19 +47,19 @@ export default function Settings() {
             console.log(response);
             if(response?.success){
                 toast.success("Password updated!", {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 setComponentLevelLoader({ loading: false, id: '' })
             }else{
                 toast.error("Password update failed", {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 setComponentLevelLoader({ loading: false, id: '' })
             }
         } catch (error) {
             console.log('Error updating password:', error);
             toast.error('Something went wrong. Please try again later.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
         }
     }

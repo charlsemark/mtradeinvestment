@@ -8,7 +8,7 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
     const router = useRouter();
 
     return (
-        <div className="flex flex-col pt-28 pb-10 px-2 mt-10">
+        <div className="flex flex-col pt-6 pb-10 px-2">
             <div className="flex flex-col gap-3">
                 <span className="text-xl text-black">Welcome, <b className="text-[#007bff]">{username}</b></span>
                 <div className="flex flex-col gap-3 md:flex-row space-x-8">

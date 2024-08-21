@@ -119,7 +119,7 @@ export default function Copiers() {
             // Display an error message or handle the lack of receipt
             console.error('Please upload an image before submitting.');
             toast.error('Please upload an image before submitting.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             return;
         }
@@ -129,14 +129,14 @@ export default function Copiers() {
         console.log(res?.success);
         if (res?.success) {
             toast.success(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             setFormData(initialFormData);
             router.push('/dashboard/trades')
             setComponentLevelLoader({ loading: false, id: '' })
         } else {
             toast.error(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             // setFormData(initialFormData);
             setComponentLevelLoader({ loading: false, id: '' })

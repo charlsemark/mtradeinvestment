@@ -25,7 +25,7 @@ export default function NavigationBar({ username }) {
         window.location.reload()
     }
     return (
-        <div className="flex flex-col border border-l-0 border-t-0 border-r-1 h-screen pt-28 px-4 relative bg-white">
+        <div className="flex flex-col border border-l-0 border-t-0 border-r-1 h-screen pt-6 px-8 relative bg-white">
            
             <div className="mt-8 flex flex-col space-y-5">
                 {

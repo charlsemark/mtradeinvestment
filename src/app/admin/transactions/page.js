@@ -57,13 +57,13 @@ const Transactions = () => {
             // console.log(response);
             if (response?.success) {
                 toast.success("Transaction Approved!", {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 // setComponentLevelLoader({ loading: false, id: '' })
             } else {
                 if (response?.error) {
                     toast.error("Error updating transaction", {
-                        position: toast.POSITION.TOP_RIGHT,
+                        position: "top-right",
                     });
                 }
                 // setComponentLevelLoader({ loading: false, id: '' })
@@ -71,7 +71,7 @@ const Transactions = () => {
         } catch (error) {
             console.log("Error updating transaction:", error);
             toast.error("Something went wrong. Please try again later.", {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
         }
     }
@@ -92,13 +92,13 @@ const Transactions = () => {
     //         console.log(response);
     //         if (response?.success) {
     //             toast.success("Transaction Declined!", {
-    //                 position: toast.POSITION.TOP_RIGHT,
+    //                 position: "top-right",
     //             });
     //             // setComponentLevelLoader({ loading: false, id: '' })
     //         } else {
     //             if (response?.error) {
     //                 toast.error("Error updating transaction", {
-    //                     position: toast.POSITION.TOP_RIGHT,
+    //                     position: "top-right",
     //                 });
     //             }
     //             // setComponentLevelLoader({ loading: false, id: '' })
@@ -106,7 +106,7 @@ const Transactions = () => {
     //     } catch (error) {
     //         console.log("Error updating transaction:", error);
     //         toast.error("Something went wrong. Please try again later.", {
-    //             position: toast.POSITION.TOP_RIGHT,
+    //             position: "top-right",
     //         });
     //     }
     // }

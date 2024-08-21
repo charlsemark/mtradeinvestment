@@ -49,12 +49,12 @@ export default function Profile() {
                     </div>
                 )}
                 {/* Main Component */}
-                <div className="mx-auto flex items-center justify-center flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 max-w-[1200px] md:flex-1 left-0  px-4 mt-32">
+                <div className="mx-auto flex items-center justify-center flex-2 flex-col gap-8 max-w-[1200px] md:flex-1 left-0  px-4 mt-10">
                     {/* Tab Component */}
                     <div className="block md:hidden py-2 px-2">
                         <p>Dashboard / Profile</p>
                     </div>
-                    <div className="text-[#333] flex space-x-4 bg-white border-[0.5px] border-gray-200 rounded-lg p-3">
+                    <div className="text-[#333] flex space-x-16 bg-white border-[0.5px] border-gray-200 rounded-lg p-3">
                         <button
                             className={`text-lg ${activeTab === 'profileDetails' ? 'font-bold' : ''}`}
                             onClick={() => handleTabChange('profileDetails')}

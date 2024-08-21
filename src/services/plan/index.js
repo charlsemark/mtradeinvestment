@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 
-export const createNewPlan = async(formData) => {
+// Create a new plan
+export const createNewPlan = async (formData) => {
     try {
         const response = await fetch('/api/admin/create-plans', {
             method: 'POST',
@@ -12,7 +13,6 @@ export const createNewPlan = async(formData) => {
         });
 
         if (!response.ok) {
-            // Handle the case where the server response was not ok
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
@@ -21,7 +21,6 @@ export const createNewPlan = async(formData) => {
         
     } catch (err) {
         console.error('Error', err);
-        // You may want to handle different types of errors differently
         if (err instanceof SyntaxError) {
             console.error('The server response is not valid JSON.');
         } else {
@@ -30,7 +29,8 @@ export const createNewPlan = async(formData) => {
     }
 }
 
-export const startNewPlan = async(formData) => {
+// Start a new plan investment
+export const startNewPlan = async (formData) => {
     try {
         const response = await fetch(`/api/user/start-investment/`, {
             method: 'POST',
@@ -42,7 +42,6 @@ export const startNewPlan = async(formData) => {
         });
 
         if (!response.ok) {
-            // Handle the case where the server response was not ok
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
@@ -51,8 +50,34 @@ export const startNewPlan = async(formData) => {
 
     } catch (error) {
         console.error('Error', error);
-        // You may want to handle different types of errors differently
-        if (err instanceof SyntaxError) {
+        if (error instanceof SyntaxError) {
+            console.error('The server response is not valid JSON.');
+        } else {
+            console.error('Some other error occurred:', error.message);
+        }
+    }
+}
+
+// Fetch a single plan by ID
+export const getSinglePlan = async (id) => {
+    try {
+        const response = await fetch(`/api/admin/get-plan/${id}`, {
+            method: 'GET',
+            headers: {
+                Authorization: `Bearer ${Cookies.get('token')}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const planData = await response.json();
+        return planData;
+
+    } catch (error) {
+        console.error('Error', error);
+        if (error instanceof SyntaxError) {
             console.error('The server response is not valid JSON.');
         } else {
             console.error('Some other error occurred:', error.message);

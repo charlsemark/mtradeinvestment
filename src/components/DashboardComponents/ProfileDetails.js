@@ -27,12 +27,12 @@ export default function ProfileDetails({ userProfit, userImage, userName, userEm
                 {/* Content for Profile Details tab */}
                 <div className="border-t-2 border-cyan-600 rounded-t-lg py-5 shadow-lg">
                     <div className="flex flex-col items-center">
-                        <div className="w-40 h-40">
-                            <img className="object-cover rounded-full border-[0.3px] border-gray-500 " src={userImage || '/profile.png'} width={300} height={300} alt={userName} />
+                        <div className="w-40 h-40 rounded-full">
+                            <img className="object-cover rounded-full border-[0.3px] border-gray-500 " src={userImage || '/profile.webp'} width={300} height={300} alt={userName} />
                         </div>
                         <h2 className="my-2">{userName}</h2>
                     </div>
-                    <div className="flex flex-col gap-4 px-3">
+                    <div className="flex flex-col gap-6 px-3">
                         <div className="flex items-center justify-between">
                             <span>Acount Balance:</span>
                             <span>${userBalance}</span>
@@ -43,34 +43,34 @@ export default function ProfileDetails({ userProfit, userImage, userName, userEm
                         </div>
                     </div>
                 </div>
-                <div className="border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-3 px-3 items-start py-5 shadow-lg">
+                <div className="border-t-8 border-cyan-600 rounded-lg flex flex-col space-y-8 px-3 items-start py-5 shadow-lg">
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-[3px]">
+                        <div className="flex items-center gap-2 font-normal text-gray-600">
                             <MailOpenIcon className="w-5 h-5" />
                             <p>Email</p>
                         </div>
-                        <p>{userEmail}</p>
+                        <p className="text-lg font-bold tracking-wide">{userEmail}</p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-[3px]">
+                        <div className="flex items-center gap-[3px] font-normal text-gray-600">
                             <UserCheck className="w-5 h-5" />
                             <p>Account ID</p>
                         </div>
-                        <p>{userID}</p>
+                        <p className="text-lg font-bold tracking-wide">{userID}</p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-[3px]">
+                        <div className="flex items-center gap-[3px] font-normal text-gray-600">
                             <MapPinned className="w-5 h-5" />
                             <p>State</p>
                         </div>
-                        <p>{state}</p>
+                        <p className="text-lg font-bold tracking-wide">{state}</p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-[3px]">
+                        <div className="flex items-center gap-[3px] font-normal text-gray-600">
                             <MapPinned className="w-5 h-5" />
                             <p>Country</p>
                         </div>
-                        <p>{country}</p>
+                        <p className="text-lg font-bold tracking-wide">{country}</p>
                     </div>
                 </div>
                 {/* Add your profile details components here */}

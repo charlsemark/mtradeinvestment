@@ -73,13 +73,13 @@ export default function AdminPlans() {
         console.log(res?.success);
         if (res?.success) {
             toast.success(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             setFormData(initialFormData);
             setComponentLevelLoader({ loading: false, id: '' })
         } else {
             toast.error(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             // setFormData(initialFormData);
             setComponentLevelLoader({ loading: false, id: '' })

@@ -74,14 +74,14 @@ export default function AddWalletAddress() {
         console.log(res?.success);
         if (res?.success) {
             toast.success(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             setFormData(initialFormData);
             setComponentLevelLoader({ loading: false, id: '' })
             router.reload()
         } else {
             toast.error(res?.message, {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
             // setFormData(initialFormData);
             setComponentLevelLoader({ loading: false, id: '' })

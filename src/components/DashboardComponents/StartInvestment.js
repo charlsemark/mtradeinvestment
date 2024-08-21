@@ -43,7 +43,7 @@ export default function StartInvestment({ plan, onClose }) {
 
             if (isNaN(enteredAmount) || enteredAmount < plan.minPrice) {
                 toast.error('Invalid amount entered. Please enter a valid amount.', {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
                 return;
             }
@@ -61,24 +61,24 @@ export default function StartInvestment({ plan, onClose }) {
                 // console.log(response);
                 if (response?.success) {
                     toast.success(response.message, {
-                        position: toast.POSITION.TOP_RIGHT,
+                        position: "top-right",
                     });
                     onClose(); // Close the modal on successful investment
                 } else {
                     toast.error(response.message, {
-                        position: toast.POSITION.TOP_RIGHT,
+                        position: "top-right",
                     });
                 }
             } else {
                 console.log('Insufficient Balnce')
                 toast.error('Insufficient balance. Please deposit funds to your account.', {
-                    position: toast.POSITION.TOP_RIGHT,
+                    position: "top-right",
                 });
             }
         } catch (error) {
             console.log('Error during investment:', error);
             toast.error('Something went wrong. Please try again later.', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: "top-right",
             });
         }
     }

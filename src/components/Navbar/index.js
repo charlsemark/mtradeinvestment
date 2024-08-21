@@ -110,11 +110,13 @@ export default function Navbar() {
         <>
             {/* {isUsersAlert && <UserAlerts />} */}
             {/* <div id="google_translate_element"></div> */}
-            <nav className="bg-[#007bff] w-full z-20 left-0 border-b border-gray-200 mt-20">
+            <nav className="bg-[#007bff] w-full z-20 left-0 border-b border-gray-200 mt-24">
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
-                        <img src="./loh.png" className="h-8 w-auto mr-1" alt=" Logo" />
-                        <span className="self-center text-base md:text-xl font-semibold whitespace-no-wrap text-white">Spiketraders</span>
+                        <div className="bg-white p-1 rounded-full">
+                            <img src="/loh.png" className="h-8 w-auto" alt=" Logo" />
+                        </div>
+                        <span className="ml-2 self-center text-base md:text-xl font-semibold whitespace-no-wrap text-white">Spiketraders</span>
                     </div>
 
                     <div className="flex items-center md:order- gap-2">

@@ -92,13 +92,13 @@ const TransactionCard = ({ userId, onClose }) => {
       console.log(response);
       if (response?.success) {
         toast.success("User updated!", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
         });
         // setComponentLevelLoader({ loading: false, id: '' })
       } else {
         if (response?.error) {
           toast.error("Error updating user", {
-            position: toast.POSITION.TOP_RIGHT,
+            position: "top-right",
           });
         }
         // setComponentLevelLoader({ loading: false, id: '' })
@@ -106,7 +106,7 @@ const TransactionCard = ({ userId, onClose }) => {
     } catch (error) {
       console.log("Error updating profile:", error);
       toast.error("Something went wrong. Please try again later.", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
       });
     }
   }
