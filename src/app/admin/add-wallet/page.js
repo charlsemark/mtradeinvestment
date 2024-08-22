@@ -16,7 +16,7 @@ export default function AddWallet() {
         <div className="px-6 pt-16 text-[#333]">
             <div className="flex items-center justify-between py-4 px-4">
                 <p>Wallets</p>
-                <button className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl cursor-pointer">Add New Wallet</button>
+                <button className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl cursor-pointer">Add New Wallet</button>
             </div>
             <div>
                 <ul className="flex flex-col space-y-4">

@@ -32,7 +32,7 @@ export default function CommonModal({ modalTitle, showModalTitle, mainContent, b
                              leaveTo="opacity-0"
                             >
                                 <Dialog.Panel className={`w-screen max-w-sm`}>
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-[#01123c] text-white shadow-xl">
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-[#ff9100] text-white shadow-xl">
                                         <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                                             {
                                                 showModalTitle ? (
@@ -45,7 +45,7 @@ export default function CommonModal({ modalTitle, showModalTitle, mainContent, b
                                         </div>
                                         {
                                             showButtons ? (
-                                                <div className="border-t border-gray-300 px-4 py-6 sm:px-6">
+                                                <div className="border-t border-gray-300 px-4 py-6 sm:px-6 text-black/30">
                                                     {buttonComponent}
                                                 </div>
                                             ) : null

@@ -85,13 +85,13 @@ export default function Investments() {
                 </div>
                 <div className="w-full mt-5 mx-0 mb-8 relative">
                     <div className="w-full flex items-center flex-col justify-center mt-10 mx-0 mb-0 space-y-6">
-                        <div className="text-center py-5"><p className="text-xl text-[#007bff] font-medium">OUR PLANS</p></div>
+                        <div className="text-center py-5"><p className="text-xl text-[#ff9100] font-medium">OUR PLANS</p></div>
                         <div className="flex gap-8 flex-col md:grid md: grid-cols-2 md:mx-auto items-center justify-center">
                             {!plans ? (<div className="flex items-center justify-center">
                                 <SpinLoading />
                             </div>) : allPlans?.map(plan => (
                                 <div key={plan.id} className="w-[320px] bg-white rounded-xl border-[0.6px] border-gray-300 h-auto flex flex-col items-center relative text-[#444]">
-                                    <div className="w-full py-6 bg-[#007bff] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
+                                    <div className="w-full py-6 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
                                     <div className="py-3">
                                         <p>Min. Investment: <b>${plan.minPrice}</b></p>
                                     </div>
@@ -107,7 +107,7 @@ export default function Investments() {
                                     <div className="py-3">
                                         <p>Duration: <b>{plan.period} Months</b></p>
                                     </div>
-                                    <button onClick={handleInvestNow} className="my-3 inline-block bg-[#007bff] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md">Invest Now</button>
+                                    <button onClick={handleInvestNow} className="my-3 inline-block bg-[#ff9100] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md">Invest Now</button>
                                 </div>
                             ))}
                         </div>

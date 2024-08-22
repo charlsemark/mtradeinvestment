@@ -77,7 +77,7 @@ export default function Settings() {
                         <input className="text-black border-[0.5px] border-gray-400 px-3 py-4 rounded-lg w-full" type="text" placeholder="Confirm new password" onChange={(e) => handleConfirmNewPassword(e.target.value)} />
                     </div>
                     {error && <p className="text-xs tracking-wide text-red-500">{error}</p>}
-                    <button className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
+                    <button className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                         text={"Loading"}
                         color={"#fff"}
                         loading={componentLevelLoader && componentLevelLoader.loading}

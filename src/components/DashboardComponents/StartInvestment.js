@@ -89,7 +89,7 @@ export default function StartInvestment({ plan, onClose }) {
                 <div className="border-b-[1px] border-gray-600">
                     <div className="flex items-center px-4 py-6 justify-between">
                         <p className="font-semibold text-lg">Review & Confirm Investment</p>
-                        <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md" onClick={onClose}>Close</button>
+                        <button className="bg-[#ff9100] px-3 py-3 text-white text-sm tracking-wide rounded-md" onClick={onClose}>Close</button>
                     </div>
                 </div>
                 <div className="flex flex-col space-y-6">
@@ -126,7 +126,7 @@ export default function StartInvestment({ plan, onClose }) {
                         <p className="font-semibold">${expectedReturn}</p>
                     </div>
                 </div>
-                <button onClick={handleInvestment} className="mt-1.5 inline-block bg-[#007bff] py-4 rounded-lg px-5 font-medium tracking-wide text-white">Start Investment</button>
+                <button onClick={handleInvestment} className="mt-1.5 inline-block bg-[#ff9100] py-4 rounded-lg px-5 font-medium tracking-wide text-white">Start Investment</button>
             </div>
             <Notifications />
         </div>

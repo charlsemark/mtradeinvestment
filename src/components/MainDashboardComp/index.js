@@ -3,17 +3,17 @@ import TradingViewWidget from "../DashboardComponents/TradeViewComp";
 import { PlusIcon } from "lucide-react";
 
 
-export default function MainDashboardComponent({ username, accountUpgrade, balance, totalInvestment, profit }) {
+export default function MainDashboardComponent({ username, accountUpgrade, balance, totalInvestment, profit, bonus }) {
 
     const router = useRouter();
 
     return (
         <div className="flex flex-col pt-6 pb-10 px-2">
             <div className="flex flex-col gap-4">
-                <span className="text-xl text-black">Welcome, <b className="text-[#007bff]">{username}</b></span>
+                <span className="text-xl text-black">Welcome, <b className="text-[#ff9100]">{username}</b></span>
                 {accountUpgrade === 'isNeeded' && (
                     <div className="flex items-center justify-between gap-6 px-3 pt-1">
-                        <p className="text-sm">Your account needs to be upgraded, please contact your admin <a className="underline text-[#007bff] cursor-pointer" href="mailto:support@spiketrader.online">via mail</a></p>
+                        <p className="text-sm">Your account needs to be upgraded, please contact your admin <a className="underline text-[#ff9100] cursor-pointer" href="mailto:support@spiketrader.online">via mail</a></p>
                     </div>
                 )}
                 <div className="flex flex-col items-start gap-3 md:flex-row space-x-8">
@@ -23,7 +23,7 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
                                 <span className="text-sm md:text-base">Investments: <b>{totalInvestment}</b></span>
                             </div>
                             <a className="cursor-pointer" href="/dashboard/deposit">
-                                <button className="bg-[#007bff] py-2 px-3 text-xs font-medium tracking-wide text-white rounded-xl cursor-pointer flex items-center gap-1 w-fit">
+                                <button className="bg-[#ff9100] py-2 px-3 text-xs font-medium tracking-wide text-white rounded-xl cursor-pointer flex items-center gap-1 w-fit">
                                     <PlusIcon className="w-5 h-5 text-white" />
                                     <span>Fund</span>
                                 </button>
@@ -37,15 +37,15 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
                             <div className="border border-1 border-gray-400 w-full flex flex-col gap-3 justify-center p-4 rounded-lg whitespace-nowrap">
                                 <span className="text-sm md:text-base">Profit: <b>${profit}</b></span>
                             </div>
-                            <div className="whitespace-nowrap border border-1 border-gray-400 w-fit flex flex-col gap-3 justify-center p-3 rounded-lg bg-[#007bff]">
+                            <div className="whitespace-nowrap w-fit flex flex-col gap-3 justify-center p-3 rounded-lg bg-[#ff9100]">
                                 <span className="text-sm md:text-base text-white"><b>Need Upgrade</b></span>
                             </div>
                         </div>
                     </div>
-                    <div className="mt-6 border border-1 border-[#007bff] p-4 rounded-xl">
-                        <p className="font-bold text-[#007bff] tracking-wide text-xl">Trading Bonus</p>
+                    <div className="mt-6 border border-1 border-[#ff9100] p-4 rounded-xl">
+                        <p className="font-bold text-[#ff9100] tracking-wide text-xl">Trading Bonus</p>
                         <p className="font-semibold text-gray-600 text-lg mt-1">Bonus: <span>{`$${bonus}`}</span></p>
-                    <marquee className="mt-1 text-[#007bff]">Start your first investment now and receive 30% bonus ✨✨</marquee>
+                    <marquee className="mt-1 text-[#ff4800]">Start your first investment now and receive 30% bonus ✨✨</marquee>
                     </div>
 
                     {/* <div className="-ml-8 border border-1 border-gray-400 h-[150px] flex flex-col justify-center p-4 rounded-lg">

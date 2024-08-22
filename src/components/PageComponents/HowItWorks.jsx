@@ -12,7 +12,7 @@ const HowItWorks = () => {
         className="bg-[#01123c] container mx-auto flex flex-col items-center justify-center md:justify-around gap-10 py-20 md:px-40"
       >
         <div className="text-center">
-          <p className="text-[#007bff] mb-3">Our Operation</p>
+          <p className="text-[#ff9100] mb-3">Our Operation</p>
           <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-gray-600 -tracking-wide md:w-3/4 lg:3/5">
             HOW SPIKETRADER WORKS
           </h1>
@@ -46,7 +46,7 @@ const HowItWorks = () => {
               </p>
             </div>
             <button
-              className="flex items-center space-x-1 bg-[#007bff] text-white text-[18px] px-6 py-3 hover:opacity-80 ease-in duration-200 rounded-md"
+              className="flex items-center space-x-1 bg-[#ff9100] text-white text-[18px] px-6 py-3 hover:opacity-80 ease-in duration-200 rounded-md"
               // data-aos="fade-up"
               // data-aos-delay="800"
             >

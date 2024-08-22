@@ -157,7 +157,7 @@ export default function Copiers() {
                     <div className="border-b-[1px] border-gray-600">
                         <div className="flex items-center px-4 py-6 justify-between">
                             <p className="font-semibold text-lg">Create Copiers</p>
-                            <a href="/dashboard/trades" className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">View Copiers</a>
+                            <a href="/dashboard/trades" className="bg-[#ff9100] px-3 py-3 text-white text-sm tracking-wide rounded-md">View Copiers</a>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-4 px-4 pt-8 pb-4">
@@ -182,7 +182,7 @@ export default function Copiers() {
                         </div>
 
 
-                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
+                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                             text={"Loading"}
                             color={"#fff"}
                             loading={componentLevelLoader && componentLevelLoader.loading}

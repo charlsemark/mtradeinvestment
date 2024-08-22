@@ -14,7 +14,7 @@ export default function NotFound() {
               >
                 Go back home
               </a>
-              <a href="/contact" className="text-sm font-semibold text-[#007bff]">
+              <a href="/contact" className="text-sm font-semibold text-[#ff9100]">
                 Contact support <span aria-hidden="true">&rarr;</span>
               </a>
             </div>

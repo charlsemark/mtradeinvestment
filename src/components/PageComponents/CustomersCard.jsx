@@ -8,7 +8,7 @@ export default function Customers() {
   return (
     <div className="bg-white py-26 px-8">
       <div className="text-center space-y-2 mb-8 pt-10">
-        <p className="text-[#007bff] font-bold text-2xl md:text-4xl tracking-wide">
+        <p className="text-[#ff9100] font-bold text-2xl md:text-4xl tracking-wide">
           Trusted by clients worldwide
         </p>
         <p className="text-base text-gray-600">

@@ -33,19 +33,19 @@ export default function Admin() {
 
         </div>
       </div> */}
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/users">
+        <a className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/users">
           All Users
         </a>
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/create-plans">
+        <a className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="/admin/create-plans">
           Create Plans
         </a>
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/transactions">
+        <a className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/transactions">
           All Transactions
         </a>
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/investments">
+        <a className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/investments">
           All Investments
         </a>
-        <a className="mt-1.5 inline-block bg-[#007bff] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/add-wallet">
+        <a className="mt-1.5 inline-block bg-[#ff9100] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/add-wallet">
           Add Wallet Address
         </a>
         {/* <a className="mt-1.5 inline-block bg-[#fd961a] py-2 px-5 text-xs font-medium tracking-wide text-white rounded-xl w-fit" href="admin/copiers">

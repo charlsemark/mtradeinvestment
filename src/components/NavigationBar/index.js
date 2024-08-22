@@ -31,14 +31,14 @@ export default function NavigationBar({ username }) {
                 {
                     user?.role == 'client' ?
                         dashboardNavLinks.map((navItem, index) => (
-                            <a href={navItem.path} key={navItem.index} className={`cursor-pointer flex items-center space-x-3 p-3 rounded-lg ${activeNavIndex === index ? "bg-[#007bff] text-white rounded-l-xl" : " "}`}>
+                            <a href={navItem.path} key={navItem.index} className={`cursor-pointer flex items-center space-x-3 p-3 rounded-lg ${activeNavIndex === index ? "bg-[#ff9100] text-white rounded-l-xl" : " "}`}>
                                 <span>{navItem.icon}</span>
                                 <span>{navItem.label}</span>
                             </a>
                         )) :
                         user?.role === 'admin' ?
                             adminNavOptions.map((navItem, index) => (
-                                <a href={navItem.path} key={navItem.index} className={`cursor-pointer flex items-center space-x-3 p-3 rounded-lg ${activeNavIndex === index ? "bg-[#007bff] text-white rounded-l-xl" : " "}`}>
+                                <a href={navItem.path} key={navItem.index} className={`cursor-pointer flex items-center space-x-3 p-3 rounded-lg ${activeNavIndex === index ? "bg-[#ff9100] text-white rounded-l-xl" : " "}`}>
                                     <span>{navItem.icon}</span>
                                     <span>{navItem.label}</span>
                                 </a>

@@ -140,7 +140,7 @@ export default function Withdraw() {
                         <div className="flex items-center px-4 py-6 justify-between">
                             <p className="font-semibold text-lg">Withdrawal</p>
                             <a href="/dashboard/transactions">
-                                <button className="bg-[#007bff] px-3 py-3 text-white text-sm tracking-wide rounded-md">Withdrawal History</button>
+                                <button className="bg-[#ff9100] px-3 py-3 text-white text-sm tracking-wide rounded-md">Withdrawal History</button>
                             </a>
                         </div>
                     </div>
@@ -185,7 +185,7 @@ export default function Withdraw() {
                             <label>Upload Proof of Payment<b>*</b></label>
                             <input className="border-[0.5px] border-gray-400 px-3 py-4 rounded-lg" placeholder="upload reciept" accept="image/*" max="1" type="file" onChange={handleImage} />
                         </div> */}
-                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
+                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                             text={"Loading"}
                             color={"#fff"}
                             loading={componentLevelLoader && componentLevelLoader.loading}

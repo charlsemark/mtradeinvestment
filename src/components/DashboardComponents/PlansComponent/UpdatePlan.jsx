@@ -145,7 +145,7 @@ const UpdatePlanModal = ({ plan, onClose }) => {
           </div>
           <button
             type="submit"
-            className="inline-block bg-[#007bff] py-2 px-4 text-base font-medium tracking-wide text-white rounded-md"
+            className="inline-block bg-[#ff9100] py-2 px-4 text-base font-medium tracking-wide text-white rounded-md"
           >
             Update Plan
           </button>

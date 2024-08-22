@@ -83,7 +83,7 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange} className="text-zinc-800 border-[0.5px] transistion-all ease-in-out duration-500 border-gray-300 focus:border-gray-700 rounded-lg px-4 py-3 w-full" rows={5} cols={24} placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
+            <button type="submit" className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-2 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md w-full">Submit</button>
           </form>
         </div>
         <Footer />

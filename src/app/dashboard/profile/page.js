@@ -60,7 +60,7 @@ export default function Profile() {
                             onClick={() => handleTabChange('profileDetails')}
                         >
                             <div className="flex items-center gap-1">
-                                <UserCircle className="w-5 h-5 text-[#007bff]" />
+                                <UserCircle className="w-5 h-5 text-[#ff9100]" />
                                 <h3>Profile</h3>
                             </div>
                         </button>
@@ -69,7 +69,7 @@ export default function Profile() {
                             onClick={() => handleTabChange('updateProfile')}
                         >
                             <div className="flex items-center gap-1">
-                                <UserPlus2Icon className="w-5 h-5 text-[#007bff]" />
+                                <UserPlus2Icon className="w-5 h-5 text-[#ff9100]" />
                                 <h3>Details</h3>
                             </div>
                         </button>
@@ -78,7 +78,7 @@ export default function Profile() {
                             onClick={() => handleTabChange('settings')}
                         >
                             <div className="flex items-center gap-1">
-                                <SettingsIcon className="w-5 h-5 text-[#007bff]" />
+                                <SettingsIcon className="w-5 h-5 text-[#ff9100]" />
                                 <h3>Settings</h3>
                             </div>
                         </button>

@@ -12,7 +12,7 @@ const About = () => {
                     <div className='relative h-[50vh] md:h-[80vh] overflow-hidden'>
                         <div className='absolute top-0 left-0 w-full h-full'>
                             <img src='https://leadassetmarket.com/site-images/WZMH-Architects-National-Bank-Trading-Floor-Toronto.jpg' alt='about' className='object-cover w-full h-full' />
-                            <div className="absolute inset-0 bg-[#007bff] opacity-20"></div>
+                            <div className="absolute inset-0 bg-[#ff9100] opacity-20"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-white text-center flex flex-col max-w-3xl gap-4 items-center">
                                     <h3 className="text-4xl font-bold">About Mutual Trade Investment</h3>

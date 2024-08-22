@@ -72,14 +72,14 @@ const Carousel = () => {
             alt={`Slide ${slide.id}`}
             className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 bg-[#007bff] opacity-20"></div>
+          <div className="absolute inset-0 bg-[#ff9100] opacity-20"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-white text-center flex flex-col max-w-3xl gap-4 items-center"> 
               <h3 className="text-4xl font-bold">{slide.title}</h3>
               <p className='text-lg font-medium'>{slide.desc}</p>
               <div className='flex flex-row items-center gap-2 md:gap-4'>
-                <Link className='py-3 px-6 text-lg font-bold bg-[#007bff] rounded-lg' href={slide.link1}>{slide.text1}</Link>
-                <Link className='py-3 px-6 text-lg font-bold bg-[#007bff] rounded-lg' href={slide.link2}>{slide.text2}</Link>
+                <Link className='py-3 px-6 text-lg font-bold bg-[#ff9100] rounded-lg' href={slide.link1}>{slide.text1}</Link>
+                <Link className='py-3 px-6 text-lg font-bold bg-[#ff9100] rounded-lg' href={slide.link2}>{slide.text2}</Link>
               </div>
             </div>
           </div>

@@ -75,7 +75,7 @@ function NavItems({ isModalView = false }) {
                             ))
                 }
                 {
-                    isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-white py-3 px-5 text-sm font-medium tracking-wide text-[#007bff] rounded-md">Logout</button> : <button onClick={() => router.push('/login')} className="mt-1.5 inline-block bg-white py-3 px-5 text-sm font-medium tracking-wide text-[#007bff] rounded-md">Login</button>
+                    isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-white py-3 px-5 text-sm font-medium tracking-wide text-[#ff9100] rounded-md">Logout</button> : <button onClick={() => router.push('/login')} className="mt-1.5 inline-block bg-white py-3 px-5 text-sm font-medium tracking-wide text-[#ff9100] rounded-md">Login</button>
                 }
             </div>
         </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
         <>
             {/* {isUsersAlert && <UserAlerts />} */}
             {/* <div id="google_translate_element"></div> */}
-            <nav className="bg-[#007bff] w-full z-20 left-0 border-b border-gray-200 mt-24">
+            <nav className="bg-[#ff9100] w-full z-20 left-0 border-b border-gray-200 mt-24">
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
                         <div className="bg-white p-1 rounded-full">
@@ -138,9 +138,9 @@ export default function Navbar() {
                         {/* {
                             isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Logout</button> : <button onClick={() => router.push('/login')} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Login</button>
                         } */}
-                        <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-2 bg-[#0b2361] text-white transition-all duration-500 focus:outline-none focus:ring-2">
+                        <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-1 bg-[#f1f1f1] text-black transition-all duration-500 focus:outline-none">
                             {/* <Image src="/menu.png" alt="menu icon" width={30} height={30} /> */}
-                            <MenuIcon className="w-8 h-8" />
+                            <MenuIcon className="w-6 h-6" />
                         </button>
                     </div>
                     <NavItems user={user} isAdminView={isAdminView} router={router} />

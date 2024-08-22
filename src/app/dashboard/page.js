@@ -46,6 +46,7 @@ export default function Dashboard() {
               balance={user?.balance}
               totalInvestment={user?.plans?.length}
               profit={user?.profit}
+              bonus={user?.bonus}
               accountUpgrade={user?.accountUpgrade}
             />
           </div>

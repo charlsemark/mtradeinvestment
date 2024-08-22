@@ -52,7 +52,7 @@ export default function AllPlans() {
     <>
       <div className="bg-[#01123c] py-18 px-4 flex flex-col items-center justify-center text-center gap-5">
         <div className="flex flex-col gap-2 ">
-          <p className=" mb-5 lg:mb-10 md:text-[17px] text-[#007bff] md:w-3/4 lg:w-3/5">
+          <p className=" mb-5 lg:mb-10 md:text-[17px] text-[#ff9100] md:w-3/4 lg:w-3/5">
             Our Investment Plans
           </p>
           <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-gray-600 -tracking-wide md:w-3/4 lg:3/5">
@@ -70,9 +70,9 @@ export default function AllPlans() {
                 allPlans?.map((plan, idx) => (
                   <div
                     key={idx}
-                    className="w-[320px] bg-white rounded-xl border-[0.6px] border-[#007bff] h-auto flex flex-col items-center relative text-black"
+                    className="w-[320px] bg-white rounded-xl border-[0.6px] border-[#ff9100] h-auto flex flex-col items-center relative text-black"
                   >
-                    <div className="w-full py-4 bg-[#007bff] text-white text-center text-xl font-bold rounded-t-xl">
+                    <div className="w-full py-4 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">
                       {plan.planName}
                     </div>
                     <div className="py-3">
@@ -102,7 +102,7 @@ export default function AllPlans() {
                     </div>
                     <button
                       onClick={handleInvestNow}
-                      className="my-3 inline-block bg-[#007bff] py-3 px-10 text-base font-medium tracking-wide text-white rounded-md"
+                      className="my-3 inline-block bg-[#ff9100] py-3 px-10 text-base font-medium tracking-wide text-white rounded-md"
                     >
                       Invest Now
                     </button>

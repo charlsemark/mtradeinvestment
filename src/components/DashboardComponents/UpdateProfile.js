@@ -202,7 +202,7 @@ export default function UpdateProfile({ user }) {
                             <input className="text-black w-full border-[0.5px] border-gray-400 px-3 py-4 rounded-lg" type="text" placeholder="Enter your usdt wallet address" onChange={(e) => handleUSDT(e.target.value)} value={formData?.usdt} />
                         </div>
                     </div>
-                    <button className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
+                    <button className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md" onClick={handleFormSubmit}>{componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                         text={"Loading"}
                         color={"#fff"}
                         loading={componentLevelLoader && componentLevelLoader.loading}

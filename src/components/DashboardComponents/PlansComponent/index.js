@@ -49,7 +49,7 @@ export default function PlansComponent() {
             <div className="w-full mt-2 mx-auto mb-10 relative">
                 <div className="w-full flex items-center flex-col justify-center mt-10 mx-0 mb-0 space-y-6">
                     <div className="">
-                        <h3 className="text-[#007bff] font-medium text-lg">OUR PLANS</h3>
+                        <h3 className="text-[#ff9100] font-medium text-lg">OUR PLANS</h3>
                     </div>
                     <div className="flex gap-8 flex-col md:grid md: grid-cols-2 md:mx-auto items-center justify-center">
                         {loading ? (
@@ -60,7 +60,7 @@ export default function PlansComponent() {
                                     {/* <div className="absolute -top-10">
                                         <Image src={plan.imageUrl} width={200} height={200} alt="Plans image" className="rounded-full object-cover" />
                                     </div> */}
-                                    <div className="w-full py-6 bg-[#007bff] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
+                                    <div className="w-full py-6 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
                                     <div className="py-3">
                                         <p>Min. Investment: <b>${plan.minPrice}</b></p>
                                     </div>
@@ -76,7 +76,7 @@ export default function PlansComponent() {
                                     <div className="py-3">
                                         <p>Duration: <b>{plan.period} Days</b></p>
                                     </div>
-                                    <button className="my-3 inline-block bg-[#007bff] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md" onClick={() => handleInvestNow(plan)}>Invest Now</button>
+                                    <button className="my-3 inline-block bg-[#ff9100] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md" onClick={() => handleInvestNow(plan)}>Invest Now</button>
                                 </div>
                             ))
                         )}

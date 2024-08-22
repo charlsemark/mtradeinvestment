@@ -128,7 +128,7 @@ export default function AdminPlans() {
                                         />
                                     ) : null)
                         }
-                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#007bff] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4" onClick={handleCreatePlan}>
+                        <button className="disabled:opacity-50 flex items-center justify-center bg-[#ff9100] px-6 py-4 text-lg tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4" onClick={handleCreatePlan}>
                             {componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                                 text={"Creating Plan"}
                                 color={"#fff"}

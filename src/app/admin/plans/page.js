@@ -49,7 +49,7 @@ export default function Plans() {
                     ) : (
                         allPlans?.map(plan => (
                             <div key={plan.id} className="w-[320px] rounded-xl border-[0.6px] border-gray-600 h-auto flex flex-col items-center relative">
-                                <div className="w-full py-6 bg-[#007bff] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
+                                <div className="w-full py-6 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">{plan.planName}</div>
                                 <div className="py-3">
                                     <p>Min. Investment: <b>${plan.minPrice}</b></p>
                                 </div>
@@ -67,7 +67,7 @@ export default function Plans() {
                                 </div>
                                 <button
                                     onClick={() => handleEditClick(plan)}
-                                    className="my-3 inline-block bg-[#007bff] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md"
+                                    className="my-3 inline-block bg-[#ff9100] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md"
                                 >
                                     Edit Plan
                                 </button>

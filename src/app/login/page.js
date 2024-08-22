@@ -95,7 +95,7 @@ export default function Login() {
                     <div className="flex flex-col justify-center items-center w-full lg:flex-row">
                         <div className="w-full mt-10 mr-0 mb-0 ml-0 relative max-w-3xl lg:mt-20 lg:w-5/12">
                             <div className="flex flex-col items-center justify-start px-3 py-10 bg-white shadow-xl rounded-xl relative z-10">
-                                <p className="text-[#007bff] w-full text-2xl font-semibold text-center">
+                                <p className="text-[#ff9100] w-full text-2xl font-semibold text-center">
                                     Login to your account
                                 </p>
                                 <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-6">
@@ -123,8 +123,8 @@ export default function Login() {
                                         ) : null
                                     )}
                                 </div>
-                                <p className="text-sm text-black text-center mt-3">Don&apos;t have an account? <a href="/register" className="text-[#007bff] font-semibold underline cursor-pointer">Register</a></p>
-                                <button className="disabled:opacity-50 inline-flex items-center justify-center bg-[#007bff] px-5 py-3 text-base tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4 w-full" disabled={!isFormValid()}
+                                <p className="text-sm text-black text-center mt-3">Don&apos;t have an account? <a href="/register" className="text-[#ff9100] font-semibold underline cursor-pointer">Register</a></p>
+                                <button className="disabled:opacity-50 inline-flex items-center justify-center bg-[#ff9100] px-5 py-3 text-base tracking-wide text-white transition-all ease-in-out duration-200 font-medium focus:shadow rounded-md mt-4 w-full" disabled={!isFormValid()}
                                     onClick={handleLogin}>
                                     {componentLevelLoader && componentLevelLoader.loading ? <ComponentLevelLoader
                                         text={"Logging in"}
