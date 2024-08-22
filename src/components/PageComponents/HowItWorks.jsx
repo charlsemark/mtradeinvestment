@@ -9,7 +9,7 @@ const HowItWorks = () => {
     <>
       <div
         id="register"
-        className="container mx-auto flex flex-col items-center justify-center md:justify-around gap-10 py-20 md:px-40"
+        className="bg-[#01123c] container mx-auto flex flex-col items-center justify-center md:justify-around gap-10 py-20 md:px-40"
       >
         <div className="text-center">
           <p className="text-[#007bff] mb-3">Our Operation</p>
