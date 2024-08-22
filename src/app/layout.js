@@ -4,6 +4,7 @@ import GlobalState from '@/context';
 import Navbar from '@/components/Navbar';
 import WithdrawalNotifications from '@/components/Alerts/WithdrawalNotifications';
 import LanguageTranslate from '@/components/LanguageTranslate';
+import Script from 'next/script';
 
 // const inter = Inter({ subsets: ['latin'] });
 
