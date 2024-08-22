@@ -110,7 +110,7 @@ export default function Navbar() {
         <>
             {/* {isUsersAlert && <UserAlerts />} */}
             {/* <div id="google_translate_element"></div> */}
-            <nav className="bg-[#ff9100] w-full z-20 left-0 border-b border-gray-200 mt-24">
+            <nav className="bg-[#ff9100] w-full z-20 left-0 border-b border-gray-200">
                 <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
                     <div onClick={() => router.push('/')} className="flex items-center cursor-pointer mr-2">
                         <div className="bg-white p-1 rounded-full">

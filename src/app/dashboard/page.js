@@ -36,7 +36,7 @@ export default function Dashboard() {
   // console.log(user?.balance)
   return (
     <PrivateRoute>
-      <div className="flex bg-white">
+      <div className="flex bg-[#c2c2c2c0]">
         {isMobile ? (
           /* Main Component full screen on mobile */
           <div className="right-0 top-0 bottom-0 relative flex flex-2 flex-col gap-8 border border-l-0 border-t-0 border-r-1 w-full md:flex-1 left-0 md:left-[220px] overflow-x-auto overflow-scroll px-4 customized_scrollbar">
