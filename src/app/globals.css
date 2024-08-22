@@ -178,8 +178,16 @@ body {
   margin: 0;
 }
 
-.toast-success {
-  /* Add any additional styling for success toasts here if needed */
+.custom-toast {
+  max-width: auto; /* Adjust this to the desired width */
+  margin: 0 auto; /* Center the notification */
+  width: auto; /* Ensure it scales with content */
+}
+
+@media (max-width: 600px) {
+  .custom-toast {
+      max-width: 70%; /* Smaller width for mobile screens */
+  }
 }
 
 .goog-te-gadget-simple {

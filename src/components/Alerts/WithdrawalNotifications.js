@@ -54,22 +54,71 @@ const notifications = [
     { id: 48, user: 'Riley', amount: 6200 },
     { id: 49, user: 'Lucas', amount: 8700 },
     { id: 50, user: 'Samantha', amount: 5100 },
+    { id: 51, user: 'Evelyn', amount: 7500 },
+    { id: 52, user: 'Megan', amount: 1400 },
+    { id: 53, user: 'Nathan', amount: 4500 },
+    { id: 54, user: 'Harper', amount: 9200 },
+    { id: 55, user: 'Jack', amount: 6800 },
+    { id: 56, user: 'Ariana', amount: 3700 },
+    { id: 57, user: 'Dylan', amount: 2300 },
+    { id: 58, user: 'Brooklyn', amount: 3200 },
+    { id: 59, user: 'Levi', amount: 5000 },
+    { id: 60, user: 'Zara', amount: 1250 },
+    { id: 61, user: 'Sebastian', amount: 9300 },
+    { id: 62, user: 'Hazel', amount: 7700 },
+    { id: 63, user: 'Aaron', amount: 2100 },
+    { id: 64, user: 'Lucy', amount: 4100 },
+    { id: 65, user: 'Caleb', amount: 6700 },
+    { id: 66, user: 'Luna', amount: 2900 },
+    { id: 67, user: 'Brandon', amount: 11000 },
+    { id: 68, user: 'Violet', amount: 3000 },
+    { id: 69, user: 'Owen', amount: 4800 },
+    { id: 70, user: 'Aurora', amount: 7600 },
+    { id: 71, user: 'Adam', amount: 8500 },
+    { id: 72, user: 'Savannah', amount: 2400 },
+    { id: 73, user: 'Blake', amount: 5700 },
+    { id: 74, user: 'Penelope', amount: 4300 },
+    { id: 75, user: 'Eli', amount: 9200 },
+    { id: 76, user: 'Stella', amount: 6900 },
+    { id: 77, user: 'Jason', amount: 3100 },
+    { id: 78, user: 'Maya', amount: 5100 },
+    { id: 79, user: 'Wyatt', amount: 14000 },
+    { id: 80, user: 'Sadie', amount: 3900 },
+    { id: 81, user: 'Grayson', amount: 15000 },
+    { id: 82, user: 'Riley', amount: 8200 },
+    { id: 83, user: 'Nora', amount: 2400 },
+    { id: 84, user: 'Christian', amount: 11000 },
+    { id: 85, user: 'Elena', amount: 6200 },
+    { id: 86, user: 'Hunter', amount: 4100 },
+    { id: 87, user: 'Vera', amount: 3700 },
+    { id: 88, user: 'Isaac', amount: 7600 },
+    { id: 89, user: 'Adeline', amount: 2700 },
+    { id: 90, user: 'Connor', amount: 9300 },
+    { id: 91, user: 'Madelyn', amount: 8400 },
+    { id: 92, user: 'Maxwell', amount: 4700 },
+    { id: 93, user: 'Aubrey', amount: 5400 },
+    { id: 94, user: 'Cole', amount: 13000 },
+    { id: 95, user: 'Paisley', amount: 5100 },
+    { id: 96, user: 'Asher', amount: 9200 },
+    { id: 97, user: 'Clara', amount: 3600 },
+    { id: 98, user: 'Ezra', amount: 1500 },
+    { id: 99, user: 'Alice', amount: 7400 },
+    { id: 100, user: 'Carter', amount: 6600 },
 ];
+
 
 
 export default function WithdrawalNotifications() {
     useEffect(() => {
-        let index = 0;
-    
         const showNextNotification = () => {
-            if (notifications.length === 0) return; // Exit if no notifications
-    
-            const { user, amount } = notifications[index];
-    
-            // Dismiss any existing toasts
+            if (notifications.length === 0) return;
+
+            // Pick a random notification
+            const randomIndex = Math.floor(Math.random() * notifications.length);
+            const { user, amount } = notifications[randomIndex];
+
             toast.dismiss();
-    
-            // Show the next notification
+
             toast.success(`${user} has withdrawn $${amount}`, {
                 position: "bottom-left",
                 autoClose: 3000,
@@ -79,20 +128,18 @@ export default function WithdrawalNotifications() {
                 draggable: true,
                 theme: "light",
                 progress: undefined,
+                toastClassName: 'custom-toast', // Custom class for width control
             });
-    
-            // Move to the next notification in the list
-            index = (index + 1) % notifications.length;
         };
-    
+
         // Show the first notification immediately
         showNextNotification();
-    
+
         // Set up the interval to show notifications one at a time
-        const interval = setInterval(showNextNotification, 4000); // Adjust the interval as needed
-    
+        const interval = setInterval(showNextNotification, 50000);
+
         return () => clearInterval(interval); // Clean up interval on component unmount
-    }, [notifications]);
+    }, []);
 
     return (
         <div>
