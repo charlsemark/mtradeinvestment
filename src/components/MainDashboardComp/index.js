@@ -44,7 +44,7 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
                     </div>
                     <div className="mt-6 border border-1 border-[#007bff] p-4 rounded-xl">
                         <p className="font-bold text-[#007bff] tracking-wide text-xl">Trading Bonus</p>
-                        <p className="font-semibold text-gray-600 text-lg mt-1">Bonus: <span>0</span></p>
+                        <p className="font-semibold text-gray-600 text-lg mt-1">Bonus: <span>{`$${bonus}`}</span></p>
                     <marquee className="mt-1 text-[#007bff]">Start your first investment now and receive 30% bonus ✨✨</marquee>
                     </div>
 
