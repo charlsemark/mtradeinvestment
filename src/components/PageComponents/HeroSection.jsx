@@ -32,7 +32,7 @@ const HeroSection = () => {
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <h1 className="text-xl md:text-3xl lg:text-3xl font-bold mb-5 lg:mb-6 -tracking-wide md:w-3/4 lg:3/5 text-[#01123c]">
+          <h1 className="text-xl md:text-3xl lg:text-3xl font-bold mb-5 lg:mb-6 -tracking-wide md:w-3/4 lg:3/5 text-[#ff9100]">
             LUCRATIVE INVESTMENT OPPORTUNITY AT YOUR FINGERTIPS.
           </h1>
           <p
@@ -55,7 +55,7 @@ const HeroSection = () => {
             investors. Spiketrade's success can only be measured by your
             success.
           </p>
-          <button className="flex items-center space-x-1 bg-[#01123c] text-white text-[16px] px-5 py-3 hover:opacity-80 ease-in duration-200 rounded-md">
+          <button className="flex items-center space-x-1 bg-[#ff9100] text-white text-[16px] px-5 py-3 hover:opacity-80 ease-in duration-200 rounded-md">
             <a href="/register">Get Started Now!</a>
             <TbArrowUpRight className="w-6 h-6" />
           </button>

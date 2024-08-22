@@ -50,12 +50,12 @@ export default function AllPlans() {
   };
   return (
     <>
-      <div className="bg-[#01123c] py-18 px-4 flex flex-col items-center justify-center text-center gap-5">
-        <div className="flex flex-col gap-2 ">
+      <div className="bg-black py-18 px-4 flex flex-col items-center justify-center text-center gap-5">
+        <div className="flex flex-col gap-2 pt-6">
           <p className=" mb-5 lg:mb-10 md:text-[17px] text-[#ff9100] md:w-3/4 lg:w-3/5">
             Our Investment Plans
           </p>
-          <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-gray-600 -tracking-wide md:w-3/4 lg:3/5">
+          <h1 className="text-2xl md:text-6xl lg:text-5xl font-bold mb-5 lg:mb-6 text-white -tracking-wide md:w-3/4 lg:3/5">
             CHOOSE YOUR PREFERRED TRADING PACKAGE
           </h1>
         </div>

@@ -138,9 +138,9 @@ export default function Navbar() {
                         {/* {
                             isAuthUser ? <button onClick={handleLogout} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Logout</button> : <button onClick={() => router.push('/login')} className="mt-1.5 inline-block bg-[#fd961a] py-3 px-5 text-sm font-medium tracking-wide text-white rounded-md">Login</button>
                         } */}
-                        <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-lg p-1 bg-[#f1f1f1] text-black transition-all duration-500 focus:outline-none">
+                        <button onClick={() => setShowNavModal(!showNavModal)} className="md:hidden rounded-md p-1 bg-[#f1f1f1] text-black transition-all duration-500 focus:outline-none">
                             {/* <Image src="/menu.png" alt="menu icon" width={30} height={30} /> */}
-                            <MenuIcon className="w-6 h-6" />
+                            <MenuIcon className="w-7 h-7" />
                         </button>
                     </div>
                     <NavItems user={user} isAdminView={isAdminView} router={router} />

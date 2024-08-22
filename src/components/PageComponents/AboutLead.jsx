@@ -9,15 +9,15 @@ const AboutLead = () => {
     Aos.init({ duration: 200 });
   }, []);
   return (
-    <div className="mx-auto flex flex-col items-center bg-[#01123c] text-white justify-center gap-10 py-20  w-full">
+    <div className="mx-auto flex flex-col items-center bg-black text-white justify-center gap-10 py-20  w-full">
       <div className="container md:px-40 flex flex-col items-center gap-6">
         <div
           className="flex flex-col items-center gap-2"
           data-aos="fade-right"
           data-aos-delay="100"
         >
-          <span className="bg-white p-6 rounded-full">
-            <TrophyIcon className="text-[#01123c] text-xl" />
+          <span className="bg-[#ff9100] p-6 rounded-full">
+            <TrophyIcon className="text-[#fff] text-xl" />
           </span>
           <p className="text-white text-lg">Mutual Trade Investment</p>
         </div>

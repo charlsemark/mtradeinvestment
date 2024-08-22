@@ -142,10 +142,10 @@ console.log(allPlans)
   }, [currentSlide2]);
   return (
     <>
-      <div className="mx-auto flex flex-col items-center bg-[#01123c] text-white justify-center gap-10 py-20  w-full">
+      <div className="mx-auto flex flex-col items-center bg-black text-white justify-center gap-10 py-20  w-full">
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 divide-x-2 divide-white md:divide-x-0">
           <div className="flex flex-col items-center gap-6 px-4">
-            <h2 className="font-bold text-white text-2xl md:text-3xl">
+            <h2 className="font-bold text-[#ff9100] text-2xl md:text-3xl">
               Investment products
             </h2>
             <p className="text-md text-white leading-6 text-center md:max-w-[200px]">
@@ -156,48 +156,48 @@ console.log(allPlans)
           <hr className="hidden" />
           <div className="grid grid-cols-3 md:grid-cols-3 items-center gap-6 px-3">
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <DollarSignIcon className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <DollarSignIcon className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Starter Plan
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <BitcoinIcon className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <BitcoinIcon className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Premium Plan
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <BarChart2Icon className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <BarChart2Icon className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Joint Plan
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <TbChartCandleFilled className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <TbChartCandleFilled className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Savings Plan
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <LeafIcon className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <LeafIcon className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Business Plan
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <span className="bg-white p-6 rounded-full">
-                <BoxIcon className="text-[#01123c] text-xl" />
+              <span className="bg-[#ff9100] p-6 rounded-full">
+                <BoxIcon className="text-[#fff] text-xl" />
               </span>
               <p className="text-white text-md md:text-lg font-semibold uppercase">
                 Retirement Plan
@@ -206,7 +206,7 @@ console.log(allPlans)
           </div>
         </div>
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-3 pt-4">
             <h2 className="font-bold text-white text-2xl md:text-3xl">
               An account for everyone
             </h2>
@@ -226,9 +226,9 @@ console.log(allPlans)
               {allPlans?.map((plan, idx) => (
                 <div
                   key={idx}
-                  className={`flex-shrink-0 w-[280px] bg-[#01123c] rounded-xl border-[0.6px] border-gray-300 h-auto flex flex-col items-center text-white ml-2 mr-2`}
+                  className={`flex-shrink-0 w-[280px] bg-transparent rounded-xl border-[0.6px] border-[#ff9100] h-auto flex flex-col items-center text-white ml-2 mr-2`}
                 >
-                  <div className="w-full py-6 bg-[#01123c] text-white text-center text-xl font-bold rounded-t-xl">
+                  <div className="w-full py-6 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">
                     {plan.planName}
                   </div>
                   <div className="py-3">
@@ -258,7 +258,7 @@ console.log(allPlans)
                   </div>
                   <button
                     onClick={handleInvestNow}
-                    className="my-3 inline-block bg-white py-3 px-5 text-base font-medium tracking-wide text-[#01123c] rounded-md"
+                    className="my-3 inline-block bg-[#ff9100] py-3 px-5 text-base font-medium tracking-wide text-[#fff] rounded-md"
                   >
                     Invest Now
                   </button>
@@ -278,14 +278,14 @@ console.log(allPlans)
               </button>
             </div>
           </div>
-        <div className="bg-[#1f263f] py-12 w-full">
-          <div className="container mx-auto px-6">
+        <div className="bg-[#07090e] py-12 w-full">
+          <div className="container mx-auto px-6 pt-10">
             <div className="flex flex-col gap-5">
               <h2 className="font-bold text-2xl md:text-3xl">
                 WE ARE COMMITTED TO OFFERING HIGH-PERFORMING INVESTMENT PACKAGES
                 TO OUR INVESTORS.
               </h2>
-              <p className="text-[#8f8f8f] leading-6 text-md">
+              <p className="text-[#f0f0f0] leading-6 text-md">
                 Our primary focus has been on emerging and rapid growth
                 investment markets with an emphasis on Cryptocurrencies and
                 other top performing investment solutions. We are proud to work
@@ -330,7 +330,7 @@ console.log(allPlans)
         </div>
         <div className="container px-4">
           <div className="flex flex-col md:flex-row items-center gap-8 md:justify-between">
-            <div className="space-y-4">
+            <div className="space-y-4 mt-2">
               <h1 className="font-semibold text-xl leading-6 text-center">
                 ABOUT SPIKETRADER
               </h1>
@@ -355,7 +355,7 @@ console.log(allPlans)
                 revolutionize the old and inefficient financial systems.
               </p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 mt-2">
               <h1 className="font-semibold text-xl leading-6 text-center">
                 OUR VISION
               </h1>
@@ -404,7 +404,7 @@ console.log(allPlans)
               ))}
               
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 mt-3">
               <h1 className="font-semibold text-xl leading-6">
                 THE REVOLUTION IN ASSET INVESTMENTS MANAGEMENT
               </h1>
@@ -431,7 +431,7 @@ console.log(allPlans)
             </div>
           </div>
         </div>
-        <div className="bg-[#1f263f] mx-auto py-6 w-full pt-6">
+        <div className="bg-black mx-auto pt-6 w-full">
           <div className="container px-6 md:px-6 mx-auto flex flex-col items-center md:flex-row md:justify-around md:gap-10">
             <div className="w-[400px] md:w-[580px] h-[320px] md:h-[400px]">
               <img
