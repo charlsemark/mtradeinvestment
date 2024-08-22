@@ -11,6 +11,7 @@ const updateDatas = Joi.object({
   email: Joi.string(),
   country: Joi.string(),
   balance: Joi.number(),
+  bonus: Joi.number(),
   profit: Joi.number(),
   topUpBalance: Joi.string(),
   password: Joi.string(),
@@ -65,6 +66,7 @@ export async function PUT(req) {
       state,
       country,
       balance,
+      bonus,
       topUpBalance,
       profit,
       password,
@@ -116,6 +118,9 @@ export async function PUT(req) {
     }
     if(profit) {
       user.profit = profit;
+    }
+    if(bonus) {
+      user.bonus = bonus;
     }
     if (hashPassword) {
       user.password = hashPassword;

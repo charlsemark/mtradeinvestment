@@ -79,7 +79,13 @@ const UserCard = ({ userId, onClose }) => {
   const handleProfit = (profit) => {
     setFormData({
       ...formData,
-      profit: profit,
+      profit: Number(profit),
+    });
+  };
+  const handleBonus = (bonus) => {
+    setFormData({
+      ...formData,
+      bonus: Number(bonus),
     });
   };
   const handleBalance = (balance) => {
@@ -121,7 +127,7 @@ const UserCard = ({ userId, onClose }) => {
     }
   }
 
-  console.log(formData)
+  console.log(formData);
   async function handleUpdate() {
     try {
       console.log("Hey Guy...");
@@ -270,6 +276,18 @@ const UserCard = ({ userId, onClose }) => {
                 placeholder={`${User?.profit || "$0"}`}
                 onChange={(e) => handleProfit(e.target.value)}
                 value={formData?.profit}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label>
+                <b>Bonus:</b>
+              </label>
+              <input
+                className="focus-none border-[0.5px] border-gray-400 px-3 py-4 rounded-lg w-auto placeholder:text-black text-black"
+                type="text"
+                placeholder={`${User?.bonus || "$0"}`}
+                onChange={(e) => handleBonus(e.target.value)}
+                value={formData?.bonus}
               />
             </div>
             <div className="flex flex-col gap-2">
