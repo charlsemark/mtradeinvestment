@@ -70,7 +70,7 @@ export default function AllPlans() {
                 allPlans?.map((plan, idx) => (
                   <div
                     key={idx}
-                    className="w-[320px] bg-white rounded-xl border-[0.6px] border-[#ff9100] h-auto flex flex-col items-center relative text-black"
+                    className="w-[320px] bg-transparent rounded-xl border-[0.6px] border-[#ff9100] h-auto flex flex-col items-center relative text-white"
                   >
                     <div className="w-full py-4 bg-[#ff9100] text-white text-center text-xl font-bold rounded-t-xl">
                       {plan.planName}

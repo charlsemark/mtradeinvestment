@@ -136,7 +136,7 @@ export default function WithdrawalNotifications() {
         showNextNotification();
 
         // Set up the interval to show notifications one at a time
-        const interval = setInterval(showNextNotification, 50000);
+        const interval = setInterval(showNextNotification, 100000);
 
         return () => clearInterval(interval); // Clean up interval on component unmount
     }, []);

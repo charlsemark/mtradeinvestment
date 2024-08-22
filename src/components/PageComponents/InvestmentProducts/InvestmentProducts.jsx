@@ -207,22 +207,20 @@ console.log(allPlans)
         </div>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col items-center gap-3 pt-4">
-            <h2 className="font-bold text-white text-2xl md:text-3xl">
+            <h2 className="font-bold text-[#ff9100] text-2xl md:text-3xl">
               An account for everyone
             </h2>
             <p className="text-md text-white leading-6 text-center max-w-4xl px-4">
               Our goal is to make investing in financial markets more
               affordable, more intuitive, and more fun, no matter how much
-              experience you have(or don't have) Whatever your circumstances, we
+              experience you have whatever your circumstances, we
               offer wealth planning and investment management that is
-              appropriate, personal, honest and clear. And whatever your
-              ambitions, we are there to help you use investing in the financial
-              markets to enrich your life.
+              appropriate, personal, honest and clear.
             </p>
           </div>
         </div>
           <div className="container w-full mx-auto px-4 md:mx-auto mb-8 overflow-hidden">
-            <div className="px-2 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-auto ml-8 md:ml-2 mb-0 space-y-6">
+            <div className="px-2 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-auto ml-4 md:ml-2 mb-0 space-y-6">
               {allPlans?.map((plan, idx) => (
                 <div
                   key={idx}
@@ -281,7 +279,7 @@ console.log(allPlans)
         <div className="bg-[#07090e] py-12 w-full">
           <div className="container mx-auto px-6 pt-10">
             <div className="flex flex-col gap-5">
-              <h2 className="font-bold text-2xl md:text-3xl">
+              <h2 className="font-bold text-2xl md:text-3xl text-[#ff9100]">
                 WE ARE COMMITTED TO OFFERING HIGH-PERFORMING INVESTMENT PACKAGES
                 TO OUR INVESTORS.
               </h2>
@@ -331,7 +329,7 @@ console.log(allPlans)
         <div className="container px-4">
           <div className="flex flex-col md:flex-row items-center gap-8 md:justify-between">
             <div className="space-y-4 mt-2">
-              <h1 className="font-semibold text-xl leading-6 text-center">
+              <h1 className="font-semibold text-xl leading-6 text-center text-[#ff9100]">
                 ABOUT SPIKETRADER
               </h1>
               <p className="">
@@ -356,7 +354,7 @@ console.log(allPlans)
               </p>
             </div>
             <div className="space-y-4 mt-2">
-              <h1 className="font-semibold text-xl leading-6 text-center">
+              <h1 className="font-semibold text-xl leading-6 text-center text-[#ff9100]">
                 OUR VISION
               </h1>
               <p className="">
@@ -405,7 +403,7 @@ console.log(allPlans)
               
             </div>
             <div className="space-y-4 mt-3">
-              <h1 className="font-semibold text-xl leading-6">
+              <h1 className="font-semibold text-xl leading-6 text-[#ff9100]">
                 THE REVOLUTION IN ASSET INVESTMENTS MANAGEMENT
               </h1>
               <div className="space-y-6">
