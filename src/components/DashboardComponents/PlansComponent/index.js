@@ -68,13 +68,13 @@ export default function PlansComponent() {
                                         <p>Max. Investment: <b>${plan.maxPrice}</b></p>
                                     </div>
                                     <div className="py-3">
-                                        <p>ROI: <b>Daily</b></p>
+                                        <p>ROI: <b>{plan.roi}%</b></p>
                                     </div>
                                     <div className="py-3">
-                                        <p>Daily Profit: <b>{plan.roi}%</b></p>
+                                        <p>Profit: <b>{plan.roiPeriod}</b></p>
                                     </div>
                                     <div className="py-3">
-                                        <p>Duration: <b>{plan.period} Months</b></p>
+                                        <p>Duration: <b>{plan.period} Days</b></p>
                                     </div>
                                     <button className="my-3 inline-block bg-[#007bff] py-3 px-5 text-base font-medium tracking-wide text-white rounded-md" onClick={() => handleInvestNow(plan)}>Invest Now</button>
                                 </div>

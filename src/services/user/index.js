@@ -3,16 +3,8 @@ import Cookies from "js-cookie";
 
 export const fetchLoginUser = async () => {
   try {
-    console.log(Cookies.get('token'))
     const token = Cookies.get('token');
 
-    // const response = fetch('/api/user/get-user/', {
-    //     method: 'GET',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         Authorization: `Bearer ${token}`,
-    //     },
-    // });
     const response = await axios.get('/api/user/get-user/', {
       headers: {
         'Content-Type': 'application/json',
@@ -21,12 +13,6 @@ export const fetchLoginUser = async () => {
     });
 
     console.log(response)
-    // const { success, user: fetchedUser } = response.data;
-
-    // if (!response.ok) {
-    //     // Handle the case where the server response was not ok
-    //     throw new Error(`HTTP error! status: ${response.status}`);
-    // }
 
     const finalResult = response.json();
     console.log('User details from API:', finalResult);

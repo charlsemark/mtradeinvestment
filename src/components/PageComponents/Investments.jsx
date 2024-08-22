@@ -12,6 +12,7 @@ export default function AllPlans() {
   const { user } = useContext(GlobalContext);
   const [plans, setPlans] = useState([]);
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchPlansData();
@@ -49,8 +50,8 @@ export default function AllPlans() {
   };
   return (
     <>
-      <div className="py-18 px-4 flex flex-col items-center justify-center text-center gap-5">
-        <div className="text-center">
+      <div className="bg-[#01123c] py-18 px-4 flex flex-col items-center justify-center text-center gap-5">
+        <div className="flex flex-col gap-2 ">
           <p className=" mb-5 lg:mb-10 md:text-[17px] text-[#007bff] md:w-3/4 lg:w-3/5">
             Our Investment Plans
           </p>
@@ -59,7 +60,7 @@ export default function AllPlans() {
           </h1>
         </div>
         <div className="w-full mx-0 mb-8 relative">
-          <div className="w-full flex items-center flex-col justify-center mt-5 mx-0 mb-0 space-y-6">
+          <div className="w-full flex items-center flex-col justify-center mt-5 mx-auto mb-0 space-y-6">
             <div className="flex gap-8 flex-col md:grid md: grid-cols-2 md:mx-auto items-center justify-center">
               {!plans ? (
                 <div className="flex items-center justify-center">
@@ -86,17 +87,17 @@ export default function AllPlans() {
                     </div>
                     <div className="py-3">
                       <p>
-                        ROI: <b>Daily</b>
+                        ROI: <b>{plan.roi}%</b>
                       </p>
                     </div>
                     <div className="py-3">
                       <p>
-                        Daily Profit: <b>{plan.roi}%</b>
+                        Profit: <b>{plan.roiPeriod}</b>
                       </p>
                     </div>
                     <div className="py-3">
                       <p>
-                        Duration: <b>{plan.period} Months</b>
+                        Duration: <b>{plan.period} Days</b>
                       </p>
                     </div>
                     <button

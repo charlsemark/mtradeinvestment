@@ -1,20 +1,20 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useContext, useEffect } from "react";
-import { GlobalContext } from ".";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-const fetchNewAccessToken = async () => {
-  // const router = useRouter();
+const fetchNewAccessToken = () => {
+  const router = useRouter();
 
-// console.log('Hey Chief')
-  try {
+  useEffect(() => {
+    const checkToken = async () => {
+      const token = Cookies.get('token');
+      if (!token) {
+        console.log('No token found');
+        return; // Exit early if no token
+      }
 
-    const token = Cookies.get('token');
-    // console.log(token)
-    // useEffect(() => {
-      console.log(token)
-      // function fetchCurrentToken(token) {
+      try {
         const response = await fetch('/api/user/refreshToken/', {
           method: 'POST',
           headers: {
@@ -27,25 +27,26 @@ const fetchNewAccessToken = async () => {
         console.log(newToken);
         const { success, token: newAccessToken } = newToken;
 
-        if (success) {
-          // Cookies.set('token', newAccessToken)
-          console.log('Cookie has been set')
+        if (success && newAccessToken) {
+          Cookies.set('token', newAccessToken);
+          console.log('Token refreshed and cookie updated');
+        } else if (newToken.message === 'Token has Expired') {
+          console.log('Token has expired');
+          Cookies.remove('token');
+          router.push('/login');
         } else {
-          if(newToken.message === 'Token has Expired'){
-            console.log('Cookie has expired')
-            Cookies.remove('token')
-            // router.push('/admin-login')
-            window.location.href = "/login";
-          }
-          console.error('Failed to fetch new token:', response.data.message);
+          console.error('Failed to fetch new token:', newToken.message);
         }
-      // }
-      // fetchCurrentToken(token)
-    // }, [token])
-  } catch (error) {
-    // Handle other errors, such as network issues
-    console.error('Error fetching new token:', error.message);
-  }
-}
+      } catch (error) {
+        console.error('Error fetching new token:', error.message);
+        router.push('/login');
+      }
+    };
+
+    checkToken();
+  }, [router]);
+
+  return null;
+};
 
 export default fetchNewAccessToken;

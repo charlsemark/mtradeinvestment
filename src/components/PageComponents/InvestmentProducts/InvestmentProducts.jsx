@@ -1,3 +1,5 @@
+'use client'
+
 import { GlobalContext } from "@/context";
 import UserDetailsContext from "@/context/useUser";
 import { fetchPlans } from "@/services/fetchPlans";
@@ -14,56 +16,56 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { TbChartCandleFilled } from "react-icons/tb";
 
-const allPlans = [
-  {
-    planName: "Basic Plan - Beginner Group",
-    maxPrice: 100000,
-    minPrice: 10000,
-    roiPeriod: "Weekly",
-    roi: 45,
-    period: "6",
-  },
-  {
-    planName: "Business Plan - Professional Group",
-    maxPrice: 350000,
-    minPrice: 60000,
-    roiPeriod: "Weekly",
-    roi: 60,
-    period: "6",
-  },
-  {
-    planName: "Joint Plan - BOT Plan",
-    maxPrice: 1000000,
-    minPrice: 100000,
-    roiPeriod: "Weekly",
-    roi: 60,
-    period: "12",
-  },
-  {
-    planName: "Retirement Plan",
-    maxPrice: 1000000,
-    minPrice: 250000,
-    roiPeriod: "Weekly",
-    roi: 75,
-    period: "12",
-  },
-  {
-    planName: "Savings Plan",
-    maxPrice: 500000,
-    minPrice: 40000,
-    roiPeriod: "Weekly",
-    roi: 60,
-    period: "6",
-  },
-  {
-    planName: "Premium Plan",
-    maxPrice: 1000000,
-    minPrice: 75000,
-    roiPeriod: "Daily",
-    roi: 5,
-    period: "6",
-  },
-];
+// const allPlans = [
+//   {
+//     planName: "Basic Plan - Beginner Group",
+//     maxPrice: 100000,
+//     minPrice: 10000,
+//     roiPeriod: "Weekly",
+//     roi: 45,
+//     period: "6",
+//   },
+//   {
+//     planName: "Business Plan - Professional Group",
+//     maxPrice: 350000,
+//     minPrice: 60000,
+//     roiPeriod: "Weekly",
+//     roi: 60,
+//     period: "6",
+//   },
+//   {
+//     planName: "Joint Plan - BOT Plan",
+//     maxPrice: 1000000,
+//     minPrice: 100000,
+//     roiPeriod: "Weekly",
+//     roi: 60,
+//     period: "12",
+//   },
+//   {
+//     planName: "Retirement Plan",
+//     maxPrice: 1000000,
+//     minPrice: 250000,
+//     roiPeriod: "Weekly",
+//     roi: 75,
+//     period: "12",
+//   },
+//   {
+//     planName: "Savings Plan",
+//     maxPrice: 500000,
+//     minPrice: 40000,
+//     roiPeriod: "Weekly",
+//     roi: 60,
+//     period: "6",
+//   },
+//   {
+//     planName: "Premium Plan",
+//     maxPrice: 1000000,
+//     minPrice: 75000,
+//     roiPeriod: "Daily",
+//     roi: 5,
+//     period: "6",
+//   },
+// ];
 
 const slideData = [
   {
@@ -82,21 +84,43 @@ const slideData = [
 
 const InvestmentProducts = () => {
   //   UserDetailsContext();
+  const [plans, setPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlide2, setCurrentSlide2] = useState(0);
   const router = useRouter();
+
+  useEffect(() => {
+    fetchPlansData();
+}, []);
+
+async function fetchPlansData() {
+    try {
+        const plansData = await fetchPlans();
+        setPlans(plansData);
+    } catch (error) {
+        console.error('Error fetching plans:', error);
+    } finally {
+        setLoading(false);
+    }
+}
+
+const allPlans = plans?.plans;
+console.log(allPlans)
 
   const handleInvestNow = () => {
     router.push("/login");
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % allPlans.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % allPlans?.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? allPlans.length - 1 : prevSlide - 1
+      prevSlide === 0 ? allPlans?.length - 1 : prevSlide - 1
     );
   };
 
@@ -108,16 +132,6 @@ const InvestmentProducts = () => {
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, [currentSlide]);
 
-  // Next Slider
-  const nextSlide2 = () => {
-    setCurrentSlide2((prevSlide2) => (prevSlide2 + 1) % allPlans.length);
-  };
-
-  const prevSlide2 = () => {
-    setCurrentSlide2((prevSlide2) =>
-      prevSlide2 === 0 ? allPlans.length - 1 : prevSlide - 1
-    );
-  };
 
   useEffect(() => {
     const intervalId2 = setInterval(() => {
@@ -140,7 +154,7 @@ const InvestmentProducts = () => {
             </p>
           </div>
           <hr className="hidden" />
-          <div className="grid grid-cols-3 md:grid-cols-3 items-center gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 items-center gap-6 px-3">
             <div className="flex flex-col items-center gap-2 text-center">
               <span className="bg-white p-6 rounded-full">
                 <DollarSignIcon className="text-[#01123c] text-xl" />
@@ -207,8 +221,8 @@ const InvestmentProducts = () => {
             </p>
           </div>
         </div>
-          <div className="container w-full mx-4 md:mx-auto mb-8 overflow-hidden">
-            <div className="px-4 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-0 mb-0 space-y-6">
+          <div className="container w-full mx-auto px-4 md:mx-auto mb-8 overflow-hidden">
+            <div className="px-2 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-5 mx-auto ml-8 md:ml-2 mb-0 space-y-6">
               {allPlans?.map((plan, idx) => (
                 <div
                   key={idx}
@@ -229,17 +243,17 @@ const InvestmentProducts = () => {
                   </div>
                   <div className="py-3">
                     <p>
-                      Profit Period: <b>{plan.roiPeriod}</b>
+                      Profit: <b>{plan.roiPeriod}</b>
                     </p>
                   </div>
                   <div className="py-3">
                     <p>
-                      Profit: <b>{plan.roi}%</b>
+                      ROI: <b>{plan.roi}%</b>
                     </p>
                   </div>
                   <div className="py-3">
                     <p>
-                      Duration: <b>{plan.period} Months</b>
+                      Duration: <b>{plan.period} Days</b>
                     </p>
                   </div>
                   <button

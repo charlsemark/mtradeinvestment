@@ -2,17 +2,27 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useContext, useEffect } from "react";
 import { GlobalContext } from ".";
+import { useRouter } from "next/navigation";
 
-const UserDetailsContext = async () => {
-    const { setUser } = useContext(GlobalContext)
+const protectedRoutes = ['/dashboard', '/admin']; // Add all your protected routes here
 
-    try {
-        const token = Cookies.get('token'); // replace with your actual authentication token
+const UserDetailsContext = () => {
+    const { setUser } = useContext(GlobalContext);
+    const router = useRouter();
 
-        useEffect(() => {
-            const fetchLoginUser = async () => {
+    useEffect(() => {
+        const fetchLoginUser = async () => {
+            const token = Cookies.get('token');
+            const isProtectedRoute = protectedRoutes.includes(router.pathname);
 
+            if (!token) {
+                if (isProtectedRoute) {
+                    router.push('/login'); // Redirect only if it's a protected route
+                }
+                return;
+            }
 
+            try {
                 const response = await axios.get('/api/user/get-user/', {
                     headers: {
                         'Content-Type': 'application/json',
@@ -20,23 +30,36 @@ const UserDetailsContext = async () => {
                     },
                 });
 
-                console.log(response);
                 const { success, user: fetchedUser } = response.data;
 
                 if (success) {
-                    // Set the logged-in user in your global context or state
                     setUser(fetchedUser);
                 } else {
-                    // Handle the case where fetching user failed
                     console.error('Failed to fetch user details:', response.data.message);
+                    if (isProtectedRoute) {
+                        router.push('/login'); // Redirect only if it's a protected route
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching user details:', error.message);
+
+                if (error.response && error.response.status === 401) {
+                    Cookies.remove('token');
+                    if (isProtectedRoute) {
+                        router.push('/login'); // Redirect only if it's a protected route
+                    }
+                } else {
+                    if (isProtectedRoute) {
+                        router.push('/login'); // Redirect only if it's a protected route
+                    }
                 }
             }
-            fetchLoginUser()
-        }, [])
-    } catch (error) {
-        // Handle other errors, such as network issues
-        console.error('Error fetching user details:', error.message);
-    }
-}
+        };
+
+        fetchLoginUser();
+    }, [setUser, router]);
+
+    return null;
+};
 
 export default UserDetailsContext;
