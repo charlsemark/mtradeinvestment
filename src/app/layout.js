@@ -1,4 +1,4 @@
-'use client'
+
 import './globals.css';
 import GlobalState from '@/context';
 import Navbar from '@/components/Navbar';
