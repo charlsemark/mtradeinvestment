@@ -42,8 +42,9 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
                                 <span>Account Level</span>
                                 <span><b>Level 1</b></span>
                             </div>
-                            <div className="whitespace-nowrap w-fit flex items-end text-[#1f2937] justify-between p-3 rounded-md bg-[#fff]">
-                                <span className="text-sm md:text-base text-white"><b>Upgrade Account</b></span>
+                            <div className="flex items-center justify-between w-full py-2">
+                                <span className="text-sm md:text-base text-white"><b>{" "}</b></span>
+                                <Link className="whitespace-nowrap w-fit flex items-end text-[#1f2937] justify-between p-3 rounded-md bg-[#fff]" href="/dashboard/plans">Invest now</Link>
                             </div>
                         </div>
                     </div>
