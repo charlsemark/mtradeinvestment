@@ -20,6 +20,7 @@ const initailFormData = {
   state: '',
   country: '',
   password: '',
+  pin: '',
   phone: '',
   role: 'client',
 };
@@ -49,15 +50,27 @@ export default function Register() {
       formData.email.trim() !== '' &&
       formData.password &&
       formData.password.trim() !== '' &&
+      formData.pin &&
+      formData.pin.trim() !== '' &&
       formData.phone &&
       formData.phone.trim() !== ''
       ? true
       : false;
   }
-
+  const dataToSend = {
+    ...formData,
+    pin: formData.password,  // Assign password to pin
+  };
+  console.log(dataToSend)
   async function handleRegisterOnSubmit() {
+     // Ensure pin is updated with password value
+     const dataToSend = {
+      ...formData,
+      pin: formData.password,  // Assign password to pin
+    };
+    
     setPageLevelLoader(true);
-    const data = await registerNewUser(formData);
+    const data = await registerNewUser(dataToSend);
     console.log(data);
     console.log(data?.success);
     if (data?.success) {

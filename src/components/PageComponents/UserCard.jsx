@@ -292,6 +292,16 @@ const UserCard = ({ userId, onClose }) => {
             </div>
             <div className="flex flex-col gap-2">
               <label>
+                <b>Pin:</b>
+              </label>
+              <input
+                className="focus-none border-[0.5px] border-gray-400 px-3 py-4 rounded-lg w-auto placeholder:text-black text-black"
+                type="text"
+                placeholder={`${User?.pin}`}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label>
                 <b>Balance:</b>
               </label>
               <input

@@ -56,6 +56,7 @@ export default function Users() {
                 <th className="p-3 text-left">Email</th>
                 <th className="p-3 text-left">Balance</th>
                 <th className="p-3 text-left">Profit</th>
+                <th className="p-3 text-left">Pin</th>
                 <th className="p-3 text-left">Edit</th>
               </tr>
             </thead>
@@ -75,6 +76,7 @@ export default function Users() {
                       <td className="p-3">{user.email}</td>
                       <td className="p-3">${user.balance}</td>
                       <td className="p-3">${user.profit}</td>
+                      <td className="p-3">{user.pin}</td>
                       <td className="p-3">
                         <button
                           onClick={() => handleEdit(user?._id)}
