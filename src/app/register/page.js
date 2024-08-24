@@ -1,7 +1,6 @@
 'use client';
 
 import InputComponent from '@/components/FormElements/InputComponent';
-import SelectComponent from '@/components/FormElements/SelectComponent';
 import { registerNewUser } from '@/services/register';
 import { registrationFormControls } from '@/utils';
 import { useContext, useEffect, useState } from 'react';
@@ -20,7 +19,7 @@ const initailFormData = {
   state: '',
   country: '',
   password: '',
-  pin: '',
+  pin: '', // Pin is optional, so it's initialized as an empty string
   phone: '',
   role: 'client',
 };
@@ -32,61 +31,43 @@ export default function Register() {
     useContext(GlobalContext);
   const router = useRouter();
 
-  console.log(formData);
-
   function isFormValid() {
-    return formData &&
-      formData.name &&
+    return (
       formData.name.trim() !== '' &&
-      formData.username &&
       formData.username.trim() !== '' &&
-      formData.address &&
       formData.address.trim() !== '' &&
-      formData.state &&
       formData.state.trim() !== '' &&
-      formData.country &&
       formData.country.trim() !== '' &&
-      formData.email &&
       formData.email.trim() !== '' &&
-      formData.password &&
       formData.password.trim() !== '' &&
-      formData.pin &&
-      formData.pin.trim() !== '' &&
-      formData.phone &&
       formData.phone.trim() !== ''
-      ? true
-      : false;
+    );
   }
-  const dataToSend = {
-    ...formData,
-    pin: formData.password,  // Assign password to pin
-  };
-  console.log(dataToSend)
+
   async function handleRegisterOnSubmit() {
-     // Ensure pin is updated with password value
-     const dataToSend = {
+    const dataToSend = {
       ...formData,
-      pin: formData.password,  // Assign password to pin
+      pin: formData.password, // Assign password to pin if pin is empty
     };
-    
+
+    console.log('Data being sent:', dataToSend);
+
     setPageLevelLoader(true);
     const data = await registerNewUser(dataToSend);
-    console.log(data);
-    console.log(data?.success);
+
     if (data?.success) {
       toast.success(data.message, {
         position: "top-right",
       });
       setIsRegistered(true);
-      setPageLevelLoader(false);
-      setFormData(initailFormData);
     } else {
       toast.error(data.message, {
         position: "top-right",
       });
-      setPageLevelLoader(false);
-      setFormData(initailFormData);
     }
+
+    setPageLevelLoader(false);
+    setFormData(initailFormData);
   }
 
   useEffect(() => {

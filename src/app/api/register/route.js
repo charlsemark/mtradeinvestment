@@ -1,4 +1,3 @@
-// import connectToDB from "@/database";
 import { connectToDB } from '@/database';
 import User from '@/models/user';
 import { hash } from 'bcryptjs';
@@ -14,20 +13,18 @@ const schema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().min(6).required(),
   phone: Joi.number().required(),
+  pin: Joi.string().min(4).required(),  // Added validation for pin
   role: Joi.string(),
 });
 
 export const dynamic = 'force-dynamic';
 
-// @route   POST /api/register
-// @desc    creating an account
-// @access  Public
 export async function POST(req) {
   await connectToDB();
-  const { name, email, password, phone, username, address, state, country, role } = await req.json();
+  const { name, email, password, phone, username, address, state, country, pin, role } = await req.json();
 
   // Validating schema
-  const { error } = schema.validate({ name, email, password, phone, username, address, state, country, role });
+  const { error } = schema.validate({ name, email, password, phone, username, address, state, country, pin, role });
   if (error) {
     return NextResponse.json({
       success: false,
@@ -36,34 +33,40 @@ export async function POST(req) {
   }
 
   try {
-    // Checking if user already exist or not
+    // Checking if user already exists
     const isUserAlreadyExisting = await User.findOne({ email });
     if (isUserAlreadyExisting) {
       return NextResponse.json({
         success: false,
-        message: 'User already existed, Try another email or login please!',
+        message: 'User already exists, try another email or login please!',
       });
-    } else {
-      const hashPassword = await hash(password, 12);
+    }
 
-      const newUser = await User.create({
-        name,
-        email,
-        password: hashPassword,
-        phone,
-        role,
+    const hashPassword = await hash(password, 12);
+
+    // Create new user with the raw pin
+    const newUser = await User.create({
+      name,
+      email,
+      password: hashPassword,  // Hash the password only
+      pin,  // Save the pin as provided by the frontend
+      phone,
+      username,
+      address,
+      state,
+      country,
+      role,
+    });
+
+    if (newUser) {
+      return NextResponse.json({
+        success: true,
+        message: 'User created successfully!',
       });
-
-      if (newUser) {
-        return NextResponse.json({
-          success: true,
-          message: 'User created successfully!',
-        });
-      }
     }
   } catch (error) {
-    console.log('Error creating new user, please try again');
-    return NextResponse({
+    console.error('Error creating new user:', error);
+    return NextResponse.json({
       success: false,
       message: 'Something went wrong! please try again later',
     });

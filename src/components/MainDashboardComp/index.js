@@ -44,7 +44,7 @@ export default function MainDashboardComponent({ username, accountUpgrade, balan
                             </div>
                             <div className="flex items-center justify-between w-full py-2">
                                 <span className="text-sm md:text-base text-white"><b>{" "}</b></span>
-                                <Link className="whitespace-nowrap w-fit flex items-end text-[#1f2937] justify-between p-3 rounded-md bg-[#fff]" href="/dashboard/plans">Invest now</Link>
+                                <Link className="whitespace-nowrap w-fit flex items-end text-[#1f2937] justify-between text-sm py-1 px-3 rounded-md bg-[#fff]" href="/dashboard/plans">Invest now</Link>
                             </div>
                         </div>
                     </div>
